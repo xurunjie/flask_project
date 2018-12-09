@@ -1,9 +1,13 @@
-from info import redis_store
+from flask import render_template, current_app
 from . import index_blue
 
 
 @index_blue.route('/')
-def hello_world():
-    redis_store.set('name', 'itheima')
+def index():
+    return render_template('news/index.html')
 
-    return '123'
+
+@index_blue.route('/favicon.ico')
+def favicon_ico():
+    # send static file of favicon.ico
+    return current_app.send_static_file('news/favicon.ico')

@@ -41,8 +41,12 @@ def create_app(config_name):
     # create flask session extension
     Session(app)
 
-    # register blueprint
+    # register index blueprint
     from info.modules.index import index_blue
     app.register_blueprint(index_blue)
+
+    # register passport blueprint
+    from info.modules.passport import passport_blue
+    app.register_blueprint(passport_blue)
 
     return app
