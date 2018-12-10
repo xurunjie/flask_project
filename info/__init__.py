@@ -37,7 +37,7 @@ def create_app(config_name):
     global redis_store
     redis_store = redis.StrictRedis(host=config_name.REDIS_HSOT, port=config_name.REDIS_PORT)
     # start CSRF protect
-    CSRFProtect(app)
+    # CSRFProtect(app)
     # create flask session extension
     Session(app)
 

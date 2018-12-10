@@ -427,3 +427,237 @@ WARNING _internal.py:88  * Debugger is active!
 INFO _internal.py:88  * Debugger PIN: 272-747-764
 INFO _internal.py:88  * Detected change in '/Users/xurunjie/Desktop/info/flask_project/info/modules/passport/views.py', reloading
 INFO _internal.py:88  * Restarting with stat
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1761 Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 493, in connect
+    sock = self._connect()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 550, in _connect
+    raise err
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 538, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/client.py", line 754, in execute_command
+    connection.send_command(*args)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 619, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 594, in send_packed_command
+    self.connect()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 498, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 493, in connect
+    sock = self._connect()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 550, in _connect
+    raise err
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 538, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2291, in wsgi_app
+    ctx.push()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/ctx.py", line 377, in push
+    self.app, self.request
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask_session/sessions.py", line 132, in open_session
+    val = self.redis.get(self.key_prefix + sid)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/client.py", line 1207, in get
+    return self.execute_command('GET', name)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/client.py", line 760, in execute_command
+    connection.send_command(*args)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 619, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 594, in send_packed_command
+    self.connect()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 498, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:00] "GET / HTTP/1.1" 500 -
+ERROR app.py:1761 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 493, in connect
+    sock = self._connect()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 550, in _connect
+    raise err
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 538, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/client.py", line 754, in execute_command
+    connection.send_command(*args)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 619, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 594, in send_packed_command
+    self.connect()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 498, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 493, in connect
+    sock = self._connect()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 550, in _connect
+    raise err
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 538, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2291, in wsgi_app
+    ctx.push()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/ctx.py", line 377, in push
+    self.app, self.request
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask_session/sessions.py", line 132, in open_session
+    val = self.redis.get(self.key_prefix + sid)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/client.py", line 1207, in get
+    return self.execute_command('GET', name)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/client.py", line 760, in execute_command
+    connection.send_command(*args)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 619, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 594, in send_packed_command
+    self.connect()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/redis/connection.py", line 498, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:00] "GET /favicon.ico HTTP/1.1" 500 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/css/reset.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/js/index.js HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/images/logo.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/css/main.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/images/person01.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/images/news_pic.jpg HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/images/person.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/images/pic_code.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/images/hit_icon.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /static/news/images/clock.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:42] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:48] "GET /static/news/images/shutoff.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:30:48] "GET /passport/image_code?code_id=2d2e406e-cd43-4711-85a5-a006e13bf850 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:31:40] "POST /passport/smscode HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:42] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:45] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:33:45] "GET /passport/image_code?code_id=1f6dee0f-42c6-4eee-8e89-800ccceab1db HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:34:00] "GET /passport/image_code?code_id=c6741f58-e6de-43cf-a623-c2abea2d4a8d HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:34:02] "GET /passport/image_code?code_id=f0d0a791-f7f7-48d5-8ec4-c61ddcf17179 HTTP/1.1" 200 -
+INFO csrf.py:251 The CSRF token is missing.
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:34:08] "POST /passport/sms_code HTTP/1.1" 400 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:12] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:29] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:31] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:38:31] "GET /passport/image_code?code_id=357efdde-ba6f-4809-ad41-18ca81c0e079 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:40:59] "POST /passport/smscode HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:41:48] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:41:48] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:41:53] "GET /passport/image_code?code_id=91761b9e-fd4e-495a-a372-e11d645369a2 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:42:05] "GET /passport/image_code?code_id=be5dc2b7-e48c-45ab-b0aa-178623be4ab0 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:42:10] "POST /passport/smscode HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:41] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:43] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:43] "GET /passport/image_code?code_id=1674579d-c6a8-4aef-9a17-309e1deacfcb HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:49:59] "POST /passport/smscode HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:50:20] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:50:20] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:50:34] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:50:34] "GET /passport/image_code?code_id=be5692be-57bb-4bbc-ba86-6e907033a137 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:50:50] "POST /passport/smscode HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:10] "GET /passport/image_code?code_id=69c7d99a-48ba-4e50-8e61-295d5b167246 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:13] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:14] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:18] "GET /passport/image_code?code_id=9fd14f1f-73f3-4b1f-bddb-f4adc2c59290 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:27] "GET /passport/image_code?code_id=37f8c22e-3bef-4c55-aea3-bb7a31dec6b0 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:30] "GET /passport/image_code?code_id=ce5b80aa-f94e-4029-bf0d-4c1910316fea HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:52:35] "POST /passport/smscode HTTP/1.1" 404 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:53:35] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:54:03] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:54:27] "GET /passport/image_code?code_id=98991682-6fc1-47a9-80a0-dd368947519b HTTP/1.1" 200 -
+INFO views.py:37 123
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:56:17] "GET /passport/image_code?code_id=05e516f7-9c7e-4e17-be47-2c1ea712f458 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:56:23] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:56:23] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:56:25] "GET /passport/image_code?code_id=0305ce46-c344-4357-9b6e-59c941549a0f HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:56:37] "GET /passport/image_code?code_id=45ebf0aa-cebf-4024-bb90-cf0ef41a870a HTTP/1.1" 200 -
+INFO views.py:37 123
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:57:49] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:57:50] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:57:52] "GET /passport/image_code?code_id=66eafd68-8ca9-48b0-8471-a74fcbe02b2e HTTP/1.1" 200 -
+INFO views.py:37 123
+DEBUG views.py:79 sms image code content 956397
+INFO _internal.py:88 127.0.0.1 - - [10/Dec/2018 23:59:11] "POST /passport/smscode HTTP/1.1" 200 -

@@ -32,15 +32,16 @@ def get_image_code():
     return image_data
 
 
-@passport_blue.route('/sms_code', methods=['POST'])
+@passport_blue.route('/smscode', methods=['POST'])
 def sms_code():
+    current_app.logger.info('123')
     params_dict = request.json
     # 1.get mobile number infomation
     mobile = params_dict.get('mobile')
     # 2.get image code infomation
     image_code = params_dict.get('image_code')
     # 3.get code id infomation
-    image_code_id = params_dict.get('code_id')
+    image_code_id = params_dict.get('image_code_id')
     # 4.verify all infomations
     if not all([mobile, image_code, image_code_id]):
         return jsonify(error=RET.PARAMERR, errmsg='params do not full')
@@ -53,8 +54,8 @@ def sms_code():
         real_image_code = redis_store.get('image_code_id_' + image_code_id)
         if real_image_code:
             # to decode infomations from redis
-            real_image_code = real_image_code.decode('image_code_id_' + image_code_id)
-            redis_store.delete()
+            real_image_code = real_image_code.decode()
+            redis_store.delete('image_code_id_' + image_code_id)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(error=RET.DBERR, errmsg='get image code from redis failed')
