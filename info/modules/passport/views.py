@@ -4,10 +4,10 @@ import random
 from info.libs.yuntongxun.sms import CCP
 from info.models import User
 from . import passport_blue
-from info import redis_store
+from info import redis_store, db
 from info.utils.captcha.captcha import captcha
 from info.utils.response_code import RET
-from flask import render_template, request, current_app, make_response, jsonify
+from flask import render_template, request, current_app, make_response, jsonify, session
 from info import constants
 
 
@@ -91,3 +91,64 @@ def sms_code():
 
     # 9.reutrn response
     return jsonify(error=RET.OK, errmsg='send sms ok')
+
+
+@passport_blue.route('/register', methods=['POST'])
+def register():
+    """
+    register user to database
+    we need three parmas mobile numble，sms code and password
+    """
+    data = request.json
+    # get mobile , sms code and password
+    mobile = data.get('mobile')
+    sms_code = data.get('sms_code')
+    password = data.get('password')
+
+    # if not all params
+    if not all([mobile, sms_code, passport]):
+        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
+
+    # get real sms code from redis
+    try:
+        real_sms_code = redis_store.get('SMS_' + mobile)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(error=RET.DATAERR, errmsg='获取本地验证码失败')
+    # determine sms whether None
+    if not real_sms_code:
+        return jsonify(RET.NODATA, errmsg='短信验证码已过期')
+    # verify sms code whether true or false
+    if sms_code != real_sms_code:
+        return jsonify(RET.DATAERR, errmsg='短信验证码错误')
+
+    # verify true
+    try:
+        redis_store.delete('SMS_' + mobile)
+    except Exception as e:
+        current_app.logger.error(e)
+
+    # init user model
+    user = User()
+    user.nick_name = mobile
+    user.mobile = mobile
+    # password encryption
+    user.password = password
+
+    # storage user
+    try:
+        db.session.add(user)
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        current_app.logger.error(e)
+        return jsonify(RET.DATAERR,errmsg='数据保存出错')
+
+    # keep login in web clent
+    session['user_id'] = user.id
+    session['nick_name'] = user.nick_name
+    session['mobile'] = user.mobile
+
+    # return response
+    return jsonify(error=RET.OK,errmsg='ok')
+
