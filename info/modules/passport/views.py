@@ -1,5 +1,6 @@
 import re
 import random
+from datetime import datetime
 
 from info.libs.yuntongxun.sms import CCP
 from info.models import User
@@ -9,11 +10,6 @@ from info.utils.captcha.captcha import captcha
 from info.utils.response_code import RET
 from flask import render_template, request, current_app, make_response, jsonify, session
 from info import constants
-
-
-@passport_blue.route('/login')
-def passport():
-    return 'passport'
 
 
 @passport_blue.route('/image_code')
@@ -34,7 +30,6 @@ def get_image_code():
 
 @passport_blue.route('/smscode', methods=['POST'])
 def sms_code():
-    current_app.logger.info('123')
     params_dict = request.json
     # 1.get mobile number infomation
     mobile = params_dict.get('mobile')
@@ -44,10 +39,10 @@ def sms_code():
     image_code_id = params_dict.get('image_code_id')
     # 4.verify all infomations
     if not all([mobile, image_code, image_code_id]):
-        return jsonify(error=RET.PARAMERR, errmsg='params do not full')
+        return jsonify(error=RET.PARAMERR, errmsg='incomplete parameters')
     # 5.verify mobile number is true or false
     if not re.match(r'^1[3-9][0-9]{9}', mobile):
-        return jsonify(error=RET.DATAERR, errmsg='手机号不正确')
+        return jsonify(error=RET.DATAERR, errmsg='mobile format is not true')
     # 6.verify image code
     real_image_code = None
     try:
@@ -75,12 +70,13 @@ def sms_code():
         return jsonify(error=RET.DATAEXIST, errmsg='the mobile has been registered')
     # 7.create sms and send it to the mobile num
     result = random.randint(0, 999999)
+    current_app.logger.info(result)
     sms_code = '%06d' % result
     current_app.logger.debug('sms image code content %s' % sms_code)
 
-    result = CCP().send_template_sms(mobile, [sms_code, constants.SMS_CODE_REDIS_EXPIRES / 60], '1')
-    if result != 0:
-        return jsonify(error=RET.THIRDERR, errmsg='send sms failed')
+    # result = CCP().send_template_sms(mobile, [sms_code, constants.SMS_CODE_REDIS_EXPIRES / 60], '1')
+    # if result != 0:
+    #     return jsonify(error=RET.THIRDERR, errmsg='send sms failed')
 
     # 8.save sms to redis
     try:
@@ -102,25 +98,25 @@ def register():
     data = request.json
     # get mobile , sms code and password
     mobile = data.get('mobile')
-    sms_code = data.get('sms_code')
+    sms_code = data.get('smscode')
     password = data.get('password')
 
     # if not all params
-    if not all([mobile, sms_code, passport]):
-        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
+    if not all([mobile, sms_code, password]):
+        return jsonify(error=RET.PARAMERR, errmsg='incomplete parameters')
 
     # get real sms code from redis
     try:
         real_sms_code = redis_store.get('SMS_' + mobile)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DATAERR, errmsg='获取本地验证码失败')
+        return jsonify(error=RET.DATAERR, errmsg='get local sms code failed')
     # determine sms whether None
     if not real_sms_code:
-        return jsonify(RET.NODATA, errmsg='短信验证码已过期')
+        return jsonify(RET.NODATA, errmsg='sms code had expired')
     # verify sms code whether true or false
-    if sms_code != real_sms_code:
-        return jsonify(RET.DATAERR, errmsg='短信验证码错误')
+    if sms_code != real_sms_code.decode():
+        return jsonify(RET.DATAERR, errmsg='sms code error')
 
     # verify true
     try:
@@ -142,7 +138,7 @@ def register():
     except Exception as e:
         db.session.rollback()
         current_app.logger.error(e)
-        return jsonify(RET.DATAERR,errmsg='数据保存出错')
+        return jsonify(RET.DATAERR, errmsg='save data error')
 
     # keep login in web clent
     session['user_id'] = user.id
@@ -150,5 +146,63 @@ def register():
     session['mobile'] = user.mobile
 
     # return response
-    return jsonify(error=RET.OK,errmsg='ok')
+    return jsonify(error=RET.OK, errmsg='ok')
 
+
+@passport_blue.route('/login', methods=['POST'])
+def login():
+    """
+    login api
+    need mobile and passworld
+    """
+    # get parmas and detemine if there is a value
+    data = request.json
+    mobile = data.get('mobile')
+    password = data.get('password')
+
+    # verify params
+    if not all([mobile, password]):
+        return jsonify(error=RET.PARAMERR, errmsg='incomplete parameters')
+
+    # find user from database of user table
+    try:
+        user = User.query.filter_by(mobile=mobile).first()
+    except Exception as e:
+        current_app.logger.info(e)
+        return jsonify(error=RET.DATAERR, errmsg='select user information error')
+    # if not have user
+    if not user:
+        return jsonify(error=RET.DATAEXIST, errmsg='user does not exist')
+
+    # verify password
+    if not user.check_passowrd(password):
+        return jsonify(error=RET.PWDERR, errmsg='login password error')
+
+    # login success save user infomations in session
+    session['user_id'] = user.id
+    session['nick_name'] = user.nick_name
+    session['mobile'] = user.mobile
+    # recording last login time
+    user.last_login = datetime.now()
+    # submit user infomations update
+    try:
+        db.session.commit()
+    except Exception as e:
+        current_app.error(e)
+        return jsonify(error=RET.DATAERR, errmsg='user informations update error')
+
+    return jsonify(error=RET.OK, errmsg='ok')
+
+
+@passport_blue.route('/logout', methods=['POST'])
+def logout():
+    """
+    logout API
+    clear data from session
+    """
+    session.pop('user_id', None)
+    session.pop('nick_name', None)
+    session.pop('mobile', None)
+
+    # return response
+    return jsonify(error=RET.OK, errmsg='ok')

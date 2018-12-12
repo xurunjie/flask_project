@@ -3,11 +3,11 @@ $(function(){
 	// 打开登录框
 	$('.login_btn').click(function(){
         $('.login_form_con').show();
-    })
+    });
     // 点击关闭按钮关闭登录框或者注册框
 	$('.shutoff').click(function(){
 		$(this).closest('form').hide();
-    })
+    });
 
     // 隐藏错误
     $(".login_form #mobile").focus(function(){
@@ -32,9 +32,11 @@ $(function(){
 
 
 	// 点击输入框，提示文字上移
-	$('.form_group').on('click focusin',function(){
+    // there is stack problem on focusin
+	$('.form_group').on('click',function(){
+	    console.log($(this).children('.input_tip'));
 		$(this).children('.input_tip').animate({'top':-5,'font-size':12},'fast').siblings('input').focus().parent().addClass('hotline');
-    })
+    });
 
 	// 输入框失去焦点，如果输入框为空，则提示文字下移
 	$('.form_group input').on('blur focusout',function(){
@@ -44,26 +46,26 @@ $(function(){
 		{
 			$(this).siblings('.input_tip').animate({'top':22,'font-size':14},'fast');
 		}
-    })
+    });
 
 	// 打开注册框
 	$('.register_btn').click(function(){
 		$('.register_form_con').show();
 		generateImageCode()
-    })
+    });
 
 	// 登录框和注册框切换
 	$('.to_register').click(function(){
 		$('.login_form_con').hide();
 		$('.register_form_con').show();
         generateImageCode()
-    })
+    });
 
 	// 登录框和注册框切换
 	$('.to_login').click(function(){
 		$('.login_form_con').show();
 		$('.register_form_con').hide();
-    })
+    });
 	// 根据地址栏的hash值来显示用户中心对应的菜单
 	var sHash = window.location.hash;
 	if(sHash!=''){
@@ -167,7 +169,7 @@ $(function(){
             "mobile": mobile,
             "smscode": smscode,
             "password": password,
-        }
+        };
         $.ajax({
             url: "/passport/register",
             type: "post",
@@ -187,9 +189,9 @@ $(function(){
             }
         })
     })
-})
+});
 
-var imageCodeId = ""
+var imageCodeId = "";
 
 // TODO 生成一个图片验证码的编号，并设置页面中图片验证码img标签的src属性
 function generateImageCode() {
@@ -229,7 +231,7 @@ function sendSMSCode() {
         "mobile": mobile,
         "image_code": imageCode,
         "image_code_id": imageCodeId
-    }
+    };
 
     $.ajax({
         // 请求地址
