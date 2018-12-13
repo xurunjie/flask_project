@@ -1,6 +1,7 @@
 from flask import render_template, current_app, session
 
-from info.models import User
+from info import constants
+from info.models import User, News
 from . import index_blue
 
 
@@ -15,9 +16,21 @@ def index():
             user = User.query.get(user_id)
         except Exception as e:
             current_app.logger.error(e)
-    # serializer user info
+    # get click data ranking
+    new_list = None
+
+    try:
+        new_list = News.query.order_by(News.clicks.desc()).limit(constants.CLICK_RANK_MAX_NEWS)
+    except Exception as e:
+        current_app.logger.error(e)
+
+    click_new_list = []
+    for new in new_list if new_list else list():
+        click_new_list.append(new.to_basic_dict)
+
     data = {
-        'user_info':user.to_dict() if user else None
+        'user_info':user.to_dict() if user else None,
+        'click_news_list':click_new_list
     }
 
     return render_template('news/index.html',data=data)
