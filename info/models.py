@@ -36,7 +36,7 @@ class User(BaseModel, db.Model):
     nick_name = db.Column(db.String(32), unique=True, nullable=False)
     password_hash = db.Column(db.String(128), nullable=False)
     mobile = db.Column(db.String(11), unique=True, nullable=False)
-    avatar_url = db.Column(db.String(256))  # 用户头像路径
+    avatar_url = db.Column(db.String(256))  # user image url
     last_login = db.Column(db.DateTime, default=datetime.now)
     is_admin = db.Column(db.Boolean, default=False)
     signature = db.Column(db.String(512))
@@ -110,8 +110,8 @@ class News(BaseModel, db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("info_user.id"))  # user id
     status = db.Column(db.Integer,
                        default=0)  # current new is reviewed status. 0 as for success. 1 as for being reviewing.-1 as for can not failed.
-    reason = db.Column(db.String(256))  # 未通过原因，status = -1 的时候使用
-    # 当前新闻的所有评论
+    reason = db.Column(db.String(256))  # not pass reason，status = -1 use
+    # current new all comments
     comments = db.relationship("Comment", lazy="dynamic")
 
     def to_review_dict(self):
