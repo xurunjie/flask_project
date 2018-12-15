@@ -7,6 +7,7 @@ from flask_wtf import CSRFProtect
 from flask_session import Session
 
 # we can use db.init to set db again
+
 db = SQLAlchemy()
 
 redis_store = None
@@ -45,9 +46,10 @@ def create_app(config_name):
         csrf_token = generate_csrf()
         # pass a value by cookie to client
         response.set_cookie('csrf_token',csrf_token)
-
         return response
 
+    from info.utils.common import do_index_class
+    app.add_template_filter(do_index_class,"index_class")
     # create flask session extension
     Session(app)
 
@@ -58,5 +60,9 @@ def create_app(config_name):
     # register passport blueprint
     from info.modules.passport import passport_blue
     app.register_blueprint(passport_blue)
+
+    # register news blueprint
+    from info.modules.news import news_blue
+    app.register_blueprint(news_blue)
 
     return app

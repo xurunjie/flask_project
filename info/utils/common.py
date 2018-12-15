@@ -5,7 +5,7 @@ from flask import session
 
 
 def do_index_class(index):
-    """自定义过滤器，过滤点击排序html的class"""
+    """filter container create by self"""
     if index == 0:
         return "first"
     elif index == 1:
@@ -19,9 +19,9 @@ def do_index_class(index):
 def user_login_data(f):
     @functools.wraps(f)
     def wrapper(*args, **kwargs):
-        # 获取到当前登陆用户的id
+        # get current user id
         user_id = session.get("user_id")
-        # 通过id获取用户信息
+        # get user informations by user id
         user = None
         if user_id:
             from info.models import User
