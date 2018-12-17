@@ -135,3 +135,103 @@ def add_news_comment():
         return jsonify(error=RET.DBERR, errmsg='save and comment this data failed')
 
     return jsonify(error=RET.OK, errmsg='comment commit success', data=comment.to_dict())
+
+
+@news_blue.route('/news_collect', methods=['POST'])
+@user_login_data
+def news_collect():
+    """news collections"""
+    user = g.user
+    data = request.json
+    news_id = data.get('news_id')
+    action = data.get('action')
+
+    # verify user
+    if not user:
+        return jsonify(error=RET.SESSIONERR, errmsg='user is not login')
+
+    if not news_id:
+        return jsonify(error=RET.PARAMERR, errmsg='params error')
+
+    if action not in ('collect', 'cancel_collect'):
+        return jsonify(error=RET.PARAMERR, errmsg='params error')
+
+    try:
+        news = News.query.get(news_id)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(error=RET.DBERR, errmsg='query data failed')
+
+    if not news:
+        return jsonify(error=RET.NODATA, errmsg='news data is not existing')
+
+    if action == 'collect':
+        user.collection_news.append(news)
+
+    else:
+        user.collection_news.remove(news)
+
+    try:
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        db.session.rollback()
+        return jsonify(error=RET.DBERR, errmsg='save failed')
+
+    return jsonify(error=RET.OK, errmsg='operating success')
+
+
+@news_blue.route('/comment_like', methods=['POST'])
+@user_login_data
+def set_comment_like():
+    """comment like"""
+    if not g.user:
+        return jsonify(error=RET.SESSIONERR, errmsg='user is not login')
+
+    # get params
+    comment_id = request.json.get('comment_id')
+    news_id = request.json.get('news_id')
+    action = request.json.get('action')
+
+    # verify params
+    if not all([comment_id, news_id, action]):
+        return jsonify(error=RET.PARAMERR, errmsg='parmas error')
+
+    if action not in ('add', 'remove'):
+        return jsonify(error=RET.PARAMERR, errmsg='params is failed')
+
+    # query comment data
+    try:
+        comment = Comment.query.get(comment_id)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(error=RET.DBERR, errmsg='data query failed')
+
+    if not comment:
+        return jsonify(error=RET.NODATA, errmsg='data query is not exist')
+
+    if action == 'add':
+        comment_like = CommentLike.query.filter_by(comment_id=comment_id, user_id=g.user.id).first()
+        if not comment_like:
+            comment_like = CommentLike()
+            comment_like.comment_id = comment_id
+            comment_like.user_id = g.user.id
+            db.session.add(comment_like)
+            # add comment like count
+            comment.like_count += 1
+
+    else:
+        # delete comment like count -1
+        comment_like = CommentLike.query.filter_by(comment_id=comment_id, user_id=g.user.id).first()
+        if comment_like:
+            db.session.delete(comment_like)
+            # decrease comment like -1
+            comment.like_count -= 1
+    try:
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        db.session.rollback()
+        return jsonify(error=RET.DBERR, errmsg='oprating failed')
+
+    return jsonify(error=RET.OK, errmsg='oprating success')

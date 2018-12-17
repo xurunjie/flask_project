@@ -27,7 +27,9 @@
         <!-- 用户登录后显示下面，隐藏上面 -->
         {% if data.user_info %}
             <div class="user_login fr">
-                <img src="{% if data.user_info.avatar_url %}{{ data.user_info.avatar_url }}{% else %}../../static/news/images/person01.png{% endif %}" class="lgin_pic">
+                <img src="
+                        {% if data.user_info.avatar_url %}{{ data.user_info.avatar_url }}{% else %}../../static/news/images/person01.png{% endif %}"
+                     class="lgin_pic">
                 <a href="#">{{ data.user_info.nick_name }}</a>
                 <a href="#" onclick="logout()">退出</a>
             </div>
@@ -43,20 +45,24 @@
     {% block ContentBlock %}
 
     {% endblock %}
-    <div class="rank_con fr">
-        {% block AuthorBlock %}
+    {% block RankBlock %}
+        <div class="rank_con fr">
+            {% block AuthorBlock %}
 
-        {% endblock %}
-        <div class="rank_title">
-            <h3>点击排行</h3>
+            {% endblock %}
+            <div class="rank_title">
+                <h3>点击排行</h3>
+            </div>
+            <ul class="rank_list">
+                {% for news in data.click_news_list %}
+                    <li><span class="{{ loop.index0|index_class }}">{{ loop.index }}</span><a
+                            href="/news/{{ news.id }}">{{ news.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
-        <ul class="rank_list">
-            {% for news in data.click_news_list %}
-                <li><span class="{{ loop.index0|index_class }}">{{ loop.index }}</span><a href="/news/{{ news.id  }}" >{{ news.title }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+    {% endblock %}
+
 </div>
 <div class="footer">
     <div class="footer_links">

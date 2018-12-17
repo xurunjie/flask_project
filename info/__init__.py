@@ -65,4 +65,7 @@ def create_app(config_name):
     from info.modules.news import news_blue
     app.register_blueprint(news_blue)
 
+    # register userprofile
+    from info.modules.profile import profile_blue
+    app.register_blueprint(profile_blue)
     return app
