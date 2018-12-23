@@ -9,7 +9,7 @@ IMAGE_CODE_REDIS_EXPIRES = 300
 SMS_CODE_REDIS_EXPIRES = 300
 
 # set space of QiNiu stack address
-QINIU_DOMIN_PREFIX = "http://ozcxm6oo6.bkt.clouddn.com/"
+QINIU_DOMIN_PREFIX = "http://pk6gugphe.bkt.clouddn.com/"
 
 # set max new that index page can show
 HOME_PAGE_MAX_NEWS = 10

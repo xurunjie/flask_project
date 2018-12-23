@@ -43,7 +43,7 @@ class User(BaseModel, db.Model):
     gender = db.Column(
         db.Enum(
             "MAN",  # man
-            "WOMAN"  # women
+            "WOMEN"  # women
         ),
         default="MAN")
 

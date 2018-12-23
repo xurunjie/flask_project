@@ -742,3 +742,1696 @@ INFO _internal.py:88 127.0.0.1 - - [17/Dec/2018 23:25:54] "GET /news_list?cid=1&
 INFO _internal.py:88 127.0.0.1 - - [17/Dec/2018 23:25:57] "GET /news/149 HTTP/1.1" 200 -
 INFO _internal.py:88 127.0.0.1 - - [17/Dec/2018 23:26:29] "POST /news/comment_like HTTP/1.1" 200 -
 INFO _internal.py:88 127.0.0.1 - - [17/Dec/2018 23:26:55] "POST /news/comment_like HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:45] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:46] "GET /static/news/css/reset.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:46] "GET /static/news/css/main.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:46] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:46] "GET /static/news/js/main.js HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:46] "GET /static/news/js/index.js HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:46] "GET /static/news/images/logo.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:46] "GET /static/news/images/pic_code.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:46] "GET /static/news/images/hit_icon.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:46] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:46] "GET /static/news/images/clock.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:21:47] "GET /static/news/images/shutoff.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:22:01] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:22:03] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:22:18] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:22:18] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:22:18] "GET /static/news/images/person01.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:22:18] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+ERROR app.py:1761 Exception on /user/info [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 17, in profile_info
+    return render_template('news/user.html', data=data)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 1, in top-level template code
+    {% extends 'news/base.html' %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/base.html", line 45, in top-level template code
+    {% block ContentBlock %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 8, in block "ContentBlock"
+    <img src={% if data.user_info.avatar_url %}
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'user_info'
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:22:22] "GET /user/info HTTP/1.1" 500 -
+ERROR app.py:1761 Exception on /user/info [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 17, in profile_info
+    return render_template('news/user.html', data=data)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 1, in top-level template code
+    {% extends 'news/base.html' %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/base.html", line 45, in top-level template code
+    {% block ContentBlock %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 8, in block "ContentBlock"
+    <img src={% if data.user_info.avatar_url %}
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'user_info'
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:22:56] "GET /user/info HTTP/1.1" 500 -
+ERROR app.py:1761 Exception on /user/info [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 17, in profile_info
+    return render_template('news/user.html', data=data)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 1, in top-level template code
+    {% extends 'news/base.html' %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/base.html", line 45, in top-level template code
+    {% block ContentBlock %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 8, in block "ContentBlock"
+    <img src={% if data.user_info.avatar_url %}
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'user_info'
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:22:59] "GET /user/info HTTP/1.1" 500 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:22:59] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1761 Exception on /user/info [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 17, in profile_info
+    return render_template('news/user.html', data=data)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 1, in top-level template code
+    {% extends 'news/base.html' %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/base.html", line 45, in top-level template code
+    {% block ContentBlock %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 17, in block "ContentBlock"
+    <li class="active"><a href="{{ url_for("profile.base_info") }}" target="main_frame">基本资料</a></li>
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'profile.base_info'. Did you mean 'profile.profile_info' instead?
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:23:18] "GET /user/info HTTP/1.1" 500 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:23:18] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:23:22] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:23:22] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+ERROR app.py:1761 Exception on /user/info [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 17, in profile_info
+    return render_template('news/user.html', data=data)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 1, in top-level template code
+    {% extends 'news/base.html' %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/base.html", line 45, in top-level template code
+    {% block ContentBlock %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 17, in block "ContentBlock"
+    <li class="active"><a href="{{ url_for("profile.base_info") }}" target="main_frame">基本资料</a></li>
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'profile.base_info'. Did you mean 'profile.profile_info' instead?
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:23:25] "GET /user/info HTTP/1.1" 500 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1761 Exception on /user/info [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 17, in profile_info
+    return render_template('news/user.html', data=data)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 1, in top-level template code
+    {% extends 'news/base.html' %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/base.html", line 45, in top-level template code
+    {% block ContentBlock %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 17, in block "ContentBlock"
+    <li class="active"><a href="{{ url_for("profile.base_info") }}" target="main_frame">基本资料</a></li>
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'profile.base_info'. Did you mean 'profile.profile_info' instead?
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:24:23] "GET /user/info HTTP/1.1" 500 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:24:23] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:24:30] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:24:30] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+ERROR app.py:1761 Exception on /user/info [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 17, in profile_info
+    return render_template('news/user.html', data=data)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 1, in top-level template code
+    {% extends 'news/base.html' %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/base.html", line 45, in top-level template code
+    {% block ContentBlock %}
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user.html", line 17, in block "ContentBlock"
+    <li class="active"><a href="{{ url_for("profile.base_info") }}" target="main_frame">基本资料</a></li>
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'profile.base_info'. Did you mean 'profile.profile_info' instead?
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:24:32] "GET /user/info HTTP/1.1" 500 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:27:20] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:27:20] "GET /static/news/images/user_pic.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:27:20] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:27:29] "GET /user/user_follow HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:27:29] "GET /user/user_follow HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:27:30] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:03] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:03] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:03] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:04] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:04] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:04] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:22] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:25] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:53] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:53] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:53] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:53] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:55] "GET /news/149 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:55] "GET /static/news/images/cat.jpg HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:55] "GET /static/news/js/detail.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:55] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:55] "GET /static/news/images/focus_icons.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:55] "GET /static/news/images/zan_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:55] "GET /static/news/images/reply_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:55] "GET /static/news/images/collect_icons.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:55] "GET /static/news/images/comment_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:57] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:48:57] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:50:51] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:50:51] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:11] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:12] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:12] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:12] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:12] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:12] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:12] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:12] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:12] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:12] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:12] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:14] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:29] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:29] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:29] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:29] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:32] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:32] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:51:32] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:52:57] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:52:58] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:00] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:00] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:29] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:31] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:44] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:44] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:44] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:44] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:47] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:47] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:53:47] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:56] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:54:58] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:55:12] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:55:12] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:55:12] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:55:12] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:55:15] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:55:15] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:55:15] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:00] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:00] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:00] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:04] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:04] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:04] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:07] "GET /user/user_follow HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:09] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:09] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:23] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:23] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:37] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:56:37] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:57:11] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:57:13] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:57:13] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:57:28] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:57:28] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [18/Dec/2018 23:58:49] "POST /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:52] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:04:54] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:10] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:10] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:10] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:10] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:16] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:16] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:16] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:21] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:21] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:21] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:05:39] "POST /user/base_info HTTP/1.1" 200 -
+INFO manage.py:18 Map([<Rule '/passport/image_code' (HEAD, GET, OPTIONS) -> passport.get_image_code>,
+ <Rule '/passport/register' (POST, OPTIONS) -> passport.register>,
+ <Rule '/passport/smscode' (POST, OPTIONS) -> passport.sms_code>,
+ <Rule '/passport/logout' (POST, OPTIONS) -> passport.logout>,
+ <Rule '/passport/login' (POST, OPTIONS) -> passport.login>,
+ <Rule '/news/news_comment' (POST, OPTIONS) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (POST, OPTIONS) -> news.news_collect>,
+ <Rule '/news/comment_like' (POST, OPTIONS) -> news.set_comment_like>,
+ <Rule '/user/base_info' (HEAD, OPTIONS, POST, GET) -> profile.base_info>,
+ <Rule '/user/info' (HEAD, GET, OPTIONS) -> profile.profile_info>,
+ <Rule '/favicon.ico' (HEAD, GET, OPTIONS) -> /.favicon_ico>,
+ <Rule '/news_list' (HEAD, GET, OPTIONS) -> /.get_new_list>,
+ <Rule '/' (HEAD, GET, OPTIONS) -> /.index>,
+ <Rule '/static/<filename>' (HEAD, GET, OPTIONS) -> static>,
+ <Rule '/news/<news_id>' (HEAD, GET, OPTIONS) -> news.news_detail>])
+INFO manage.py:18 Map([<Rule '/passport/image_code' (GET, HEAD, OPTIONS) -> passport.get_image_code>,
+ <Rule '/passport/register' (OPTIONS, POST) -> passport.register>,
+ <Rule '/passport/smscode' (OPTIONS, POST) -> passport.sms_code>,
+ <Rule '/passport/logout' (OPTIONS, POST) -> passport.logout>,
+ <Rule '/passport/login' (OPTIONS, POST) -> passport.login>,
+ <Rule '/news/news_comment' (OPTIONS, POST) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (OPTIONS, POST) -> news.news_collect>,
+ <Rule '/news/comment_like' (OPTIONS, POST) -> news.set_comment_like>,
+ <Rule '/user/base_info' (GET, HEAD, OPTIONS, POST) -> profile.base_info>,
+ <Rule '/user/info' (GET, HEAD, OPTIONS) -> profile.profile_info>,
+ <Rule '/favicon.ico' (GET, HEAD, OPTIONS) -> /.favicon_ico>,
+ <Rule '/news_list' (GET, HEAD, OPTIONS) -> /.get_new_list>,
+ <Rule '/' (GET, HEAD, OPTIONS) -> /.index>,
+ <Rule '/static/<filename>' (GET, HEAD, OPTIONS) -> static>,
+ <Rule '/news/<news_id>' (GET, HEAD, OPTIONS) -> news.news_detail>])
+INFO manage.py:18 Map([<Rule '/passport/image_code' (GET, OPTIONS, HEAD) -> passport.get_image_code>,
+ <Rule '/passport/register' (OPTIONS, POST) -> passport.register>,
+ <Rule '/passport/smscode' (OPTIONS, POST) -> passport.sms_code>,
+ <Rule '/passport/logout' (OPTIONS, POST) -> passport.logout>,
+ <Rule '/passport/login' (OPTIONS, POST) -> passport.login>,
+ <Rule '/news/news_comment' (OPTIONS, POST) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (OPTIONS, POST) -> news.news_collect>,
+ <Rule '/news/comment_like' (OPTIONS, POST) -> news.set_comment_like>,
+ <Rule '/user/base_info' (OPTIONS, GET, HEAD, POST) -> profile.base_info>,
+ <Rule '/user/info' (GET, OPTIONS, HEAD) -> profile.profile_info>,
+ <Rule '/favicon.ico' (GET, OPTIONS, HEAD) -> /.favicon_ico>,
+ <Rule '/news_list' (GET, OPTIONS, HEAD) -> /.get_new_list>,
+ <Rule '/' (GET, OPTIONS, HEAD) -> /.index>,
+ <Rule '/static/<filename>' (GET, OPTIONS, HEAD) -> static>,
+ <Rule '/news/<news_id>' (GET, OPTIONS, HEAD) -> news.news_detail>])
+INFO manage.py:18 Map([<Rule '/passport/image_code' (GET, OPTIONS, HEAD) -> passport.get_image_code>,
+ <Rule '/passport/register' (OPTIONS, POST) -> passport.register>,
+ <Rule '/passport/smscode' (OPTIONS, POST) -> passport.sms_code>,
+ <Rule '/passport/logout' (OPTIONS, POST) -> passport.logout>,
+ <Rule '/passport/login' (OPTIONS, POST) -> passport.login>,
+ <Rule '/news/news_comment' (OPTIONS, POST) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (OPTIONS, POST) -> news.news_collect>,
+ <Rule '/news/comment_like' (OPTIONS, POST) -> news.set_comment_like>,
+ <Rule '/user/base_info' (GET, OPTIONS, HEAD, POST) -> profile.base_info>,
+ <Rule '/user/info' (GET, OPTIONS, HEAD) -> profile.profile_info>,
+ <Rule '/favicon.ico' (GET, OPTIONS, HEAD) -> /.favicon_ico>,
+ <Rule '/news_list' (GET, OPTIONS, HEAD) -> /.get_new_list>,
+ <Rule '/' (GET, OPTIONS, HEAD) -> /.index>,
+ <Rule '/static/<filename>' (GET, OPTIONS, HEAD) -> static>,
+ <Rule '/news/<news_id>' (GET, OPTIONS, HEAD) -> news.news_detail>])
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:11:45] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:11:46] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:11:50] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:11:50] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:11:57] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:11:57] "GET /user/base_info HTTP/1.1" 200 -
+ERROR views.py:57 (pymysql.err.DataError) (1265, "Data truncated for column 'gender' at row 1") [SQL: 'UPDATE info_user SET update_time=%(update_time)s, gender=%(gender)s WHERE info_user.id = %(info_user_id)s'] [parameters: {'update_time': datetime.datetime(2018, 12, 19, 0, 12, 13, 373439), 'gender': 'WOMEN', 'info_user_id': 1}] (Background on this error at: http://sqlalche.me/e/9h9h)
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:12:31] "POST /user/base_info HTTP/1.1" 200 -
+INFO manage.py:18 Map([<Rule '/passport/image_code' (OPTIONS, HEAD, GET) -> passport.get_image_code>,
+ <Rule '/passport/register' (OPTIONS, POST) -> passport.register>,
+ <Rule '/passport/smscode' (OPTIONS, POST) -> passport.sms_code>,
+ <Rule '/passport/logout' (OPTIONS, POST) -> passport.logout>,
+ <Rule '/passport/login' (OPTIONS, POST) -> passport.login>,
+ <Rule '/news/news_comment' (OPTIONS, POST) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (OPTIONS, POST) -> news.news_collect>,
+ <Rule '/news/comment_like' (OPTIONS, POST) -> news.set_comment_like>,
+ <Rule '/user/base_info' (OPTIONS, HEAD, POST, GET) -> profile.base_info>,
+ <Rule '/user/info' (OPTIONS, HEAD, GET) -> profile.profile_info>,
+ <Rule '/favicon.ico' (OPTIONS, HEAD, GET) -> /.favicon_ico>,
+ <Rule '/news_list' (OPTIONS, HEAD, GET) -> /.get_new_list>,
+ <Rule '/' (OPTIONS, HEAD, GET) -> /.index>,
+ <Rule '/static/<filename>' (OPTIONS, HEAD, GET) -> static>,
+ <Rule '/news/<news_id>' (OPTIONS, HEAD, GET) -> news.news_detail>])
+ERROR __init__.py:97 Error: Directory migrations already exists
+INFO manage.py:18 Map([<Rule '/passport/image_code' (OPTIONS, HEAD, GET) -> passport.get_image_code>,
+ <Rule '/passport/register' (POST, OPTIONS) -> passport.register>,
+ <Rule '/passport/smscode' (POST, OPTIONS) -> passport.sms_code>,
+ <Rule '/passport/logout' (POST, OPTIONS) -> passport.logout>,
+ <Rule '/passport/login' (POST, OPTIONS) -> passport.login>,
+ <Rule '/news/news_comment' (POST, OPTIONS) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (POST, OPTIONS) -> news.news_collect>,
+ <Rule '/news/comment_like' (POST, OPTIONS) -> news.set_comment_like>,
+ <Rule '/user/base_info' (POST, HEAD, OPTIONS, GET) -> profile.base_info>,
+ <Rule '/user/info' (OPTIONS, HEAD, GET) -> profile.profile_info>,
+ <Rule '/favicon.ico' (OPTIONS, HEAD, GET) -> /.favicon_ico>,
+ <Rule '/news_list' (OPTIONS, HEAD, GET) -> /.get_new_list>,
+ <Rule '/' (OPTIONS, HEAD, GET) -> /.index>,
+ <Rule '/static/<filename>' (OPTIONS, HEAD, GET) -> static>,
+ <Rule '/news/<news_id>' (OPTIONS, HEAD, GET) -> news.news_detail>])
+INFO manage.py:18 Map([<Rule '/passport/image_code' (HEAD, OPTIONS, GET) -> passport.get_image_code>,
+ <Rule '/passport/register' (POST, OPTIONS) -> passport.register>,
+ <Rule '/passport/smscode' (POST, OPTIONS) -> passport.sms_code>,
+ <Rule '/passport/logout' (POST, OPTIONS) -> passport.logout>,
+ <Rule '/passport/login' (POST, OPTIONS) -> passport.login>,
+ <Rule '/news/news_comment' (POST, OPTIONS) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (POST, OPTIONS) -> news.news_collect>,
+ <Rule '/news/comment_like' (POST, OPTIONS) -> news.set_comment_like>,
+ <Rule '/user/base_info' (HEAD, POST, OPTIONS, GET) -> profile.base_info>,
+ <Rule '/user/info' (HEAD, OPTIONS, GET) -> profile.profile_info>,
+ <Rule '/favicon.ico' (HEAD, OPTIONS, GET) -> /.favicon_ico>,
+ <Rule '/news_list' (HEAD, OPTIONS, GET) -> /.get_new_list>,
+ <Rule '/' (HEAD, OPTIONS, GET) -> /.index>,
+ <Rule '/static/<filename>' (HEAD, OPTIONS, GET) -> static>,
+ <Rule '/news/<news_id>' (HEAD, OPTIONS, GET) -> news.news_detail>])
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:15:56] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:15:57] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:16:01] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:16:02] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:16:08] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:16:08] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:16:15] "POST /user/base_info HTTP/1.1" 200 -
+ERROR views.py:57 (pymysql.err.DataError) (1265, "Data truncated for column 'gender' at row 1") [SQL: 'UPDATE info_user SET update_time=%(update_time)s, gender=%(gender)s WHERE info_user.id = %(info_user_id)s'] [parameters: {'update_time': datetime.datetime(2018, 12, 19, 0, 16, 28, 984504), 'gender': 'WOMEN', 'info_user_id': 1}] (Background on this error at: http://sqlalche.me/e/9h9h)
+INFO manage.py:18 Map([<Rule '/passport/image_code' (HEAD, GET, OPTIONS) -> passport.get_image_code>,
+ <Rule '/passport/register' (POST, OPTIONS) -> passport.register>,
+ <Rule '/passport/smscode' (POST, OPTIONS) -> passport.sms_code>,
+ <Rule '/passport/logout' (POST, OPTIONS) -> passport.logout>,
+ <Rule '/passport/login' (POST, OPTIONS) -> passport.login>,
+ <Rule '/news/news_comment' (POST, OPTIONS) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (POST, OPTIONS) -> news.news_collect>,
+ <Rule '/news/comment_like' (POST, OPTIONS) -> news.set_comment_like>,
+ <Rule '/user/base_info' (HEAD, POST, GET, OPTIONS) -> profile.base_info>,
+ <Rule '/user/info' (HEAD, GET, OPTIONS) -> profile.profile_info>,
+ <Rule '/favicon.ico' (HEAD, GET, OPTIONS) -> /.favicon_ico>,
+ <Rule '/news_list' (HEAD, GET, OPTIONS) -> /.get_new_list>,
+ <Rule '/' (HEAD, GET, OPTIONS) -> /.index>,
+ <Rule '/static/<filename>' (HEAD, GET, OPTIONS) -> static>,
+ <Rule '/news/<news_id>' (HEAD, GET, OPTIONS) -> news.news_detail>])
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR views.py:57 (pymysql.err.DataError) (1265, "Data truncated for column 'gender' at row 1") [SQL: 'UPDATE info_user SET update_time=%(update_time)s, gender=%(gender)s WHERE info_user.id = %(info_user_id)s'] [parameters: {'update_time': datetime.datetime(2018, 12, 19, 0, 17, 29, 770547), 'gender': 'WOMEN', 'info_user_id': 1}] (Background on this error at: http://sqlalche.me/e/9h9h)
+INFO manage.py:18 Map([<Rule '/passport/image_code' (HEAD, GET, OPTIONS) -> passport.get_image_code>,
+ <Rule '/passport/register' (OPTIONS, POST) -> passport.register>,
+ <Rule '/passport/smscode' (OPTIONS, POST) -> passport.sms_code>,
+ <Rule '/passport/logout' (OPTIONS, POST) -> passport.logout>,
+ <Rule '/passport/login' (OPTIONS, POST) -> passport.login>,
+ <Rule '/news/news_comment' (OPTIONS, POST) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (OPTIONS, POST) -> news.news_collect>,
+ <Rule '/news/comment_like' (OPTIONS, POST) -> news.set_comment_like>,
+ <Rule '/user/base_info' (HEAD, GET, OPTIONS, POST) -> profile.base_info>,
+ <Rule '/user/info' (HEAD, GET, OPTIONS) -> profile.profile_info>,
+ <Rule '/favicon.ico' (HEAD, GET, OPTIONS) -> /.favicon_ico>,
+ <Rule '/news_list' (HEAD, GET, OPTIONS) -> /.get_new_list>,
+ <Rule '/' (HEAD, GET, OPTIONS) -> /.index>,
+ <Rule '/static/<filename>' (HEAD, GET, OPTIONS) -> static>,
+ <Rule '/news/<news_id>' (HEAD, GET, OPTIONS) -> news.news_detail>])
+ERROR __init__.py:97 Error: Directory migrations already exists
+INFO manage.py:18 Map([<Rule '/passport/image_code' (HEAD, OPTIONS, GET) -> passport.get_image_code>,
+ <Rule '/passport/register' (OPTIONS, POST) -> passport.register>,
+ <Rule '/passport/smscode' (OPTIONS, POST) -> passport.sms_code>,
+ <Rule '/passport/logout' (OPTIONS, POST) -> passport.logout>,
+ <Rule '/passport/login' (OPTIONS, POST) -> passport.login>,
+ <Rule '/news/news_comment' (OPTIONS, POST) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (OPTIONS, POST) -> news.news_collect>,
+ <Rule '/news/comment_like' (OPTIONS, POST) -> news.set_comment_like>,
+ <Rule '/user/base_info' (HEAD, OPTIONS, GET, POST) -> profile.base_info>,
+ <Rule '/user/info' (HEAD, OPTIONS, GET) -> profile.profile_info>,
+ <Rule '/favicon.ico' (HEAD, OPTIONS, GET) -> /.favicon_ico>,
+ <Rule '/news_list' (HEAD, OPTIONS, GET) -> /.get_new_list>,
+ <Rule '/' (HEAD, OPTIONS, GET) -> /.index>,
+ <Rule '/static/<filename>' (HEAD, OPTIONS, GET) -> static>,
+ <Rule '/news/<news_id>' (HEAD, OPTIONS, GET) -> news.news_detail>])
+INFO manage.py:18 Map([<Rule '/passport/image_code' (GET, OPTIONS, HEAD) -> passport.get_image_code>,
+ <Rule '/passport/register' (POST, OPTIONS) -> passport.register>,
+ <Rule '/passport/smscode' (POST, OPTIONS) -> passport.sms_code>,
+ <Rule '/passport/logout' (POST, OPTIONS) -> passport.logout>,
+ <Rule '/passport/login' (POST, OPTIONS) -> passport.login>,
+ <Rule '/news/news_comment' (POST, OPTIONS) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (POST, OPTIONS) -> news.news_collect>,
+ <Rule '/news/comment_like' (POST, OPTIONS) -> news.set_comment_like>,
+ <Rule '/user/base_info' (POST, GET, OPTIONS, HEAD) -> profile.base_info>,
+ <Rule '/user/info' (GET, OPTIONS, HEAD) -> profile.profile_info>,
+ <Rule '/favicon.ico' (GET, OPTIONS, HEAD) -> /.favicon_ico>,
+ <Rule '/news_list' (GET, OPTIONS, HEAD) -> /.get_new_list>,
+ <Rule '/' (GET, OPTIONS, HEAD) -> /.index>,
+ <Rule '/static/<filename>' (GET, OPTIONS, HEAD) -> static>,
+ <Rule '/news/<news_id>' (GET, OPTIONS, HEAD) -> news.news_detail>])
+INFO manage.py:18 Map([<Rule '/passport/image_code' (HEAD, GET, OPTIONS) -> passport.get_image_code>,
+ <Rule '/passport/register' (POST, OPTIONS) -> passport.register>,
+ <Rule '/passport/smscode' (POST, OPTIONS) -> passport.sms_code>,
+ <Rule '/passport/logout' (POST, OPTIONS) -> passport.logout>,
+ <Rule '/passport/login' (POST, OPTIONS) -> passport.login>,
+ <Rule '/news/news_comment' (POST, OPTIONS) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (POST, OPTIONS) -> news.news_collect>,
+ <Rule '/news/comment_like' (POST, OPTIONS) -> news.set_comment_like>,
+ <Rule '/user/base_info' (POST, HEAD, GET, OPTIONS) -> profile.base_info>,
+ <Rule '/user/info' (HEAD, GET, OPTIONS) -> profile.profile_info>,
+ <Rule '/favicon.ico' (HEAD, GET, OPTIONS) -> /.favicon_ico>,
+ <Rule '/news_list' (HEAD, GET, OPTIONS) -> /.get_new_list>,
+ <Rule '/' (HEAD, GET, OPTIONS) -> /.index>,
+ <Rule '/static/<filename>' (HEAD, GET, OPTIONS) -> static>,
+ <Rule '/news/<news_id>' (HEAD, GET, OPTIONS) -> news.news_detail>])
+INFO manage.py:18 Map([<Rule '/passport/image_code' (GET, HEAD, OPTIONS) -> passport.get_image_code>,
+ <Rule '/passport/register' (POST, OPTIONS) -> passport.register>,
+ <Rule '/passport/smscode' (POST, OPTIONS) -> passport.sms_code>,
+ <Rule '/passport/logout' (POST, OPTIONS) -> passport.logout>,
+ <Rule '/passport/login' (POST, OPTIONS) -> passport.login>,
+ <Rule '/news/news_comment' (POST, OPTIONS) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (POST, OPTIONS) -> news.news_collect>,
+ <Rule '/news/comment_like' (POST, OPTIONS) -> news.set_comment_like>,
+ <Rule '/user/base_info' (GET, HEAD, POST, OPTIONS) -> profile.base_info>,
+ <Rule '/user/info' (GET, HEAD, OPTIONS) -> profile.profile_info>,
+ <Rule '/favicon.ico' (GET, HEAD, OPTIONS) -> /.favicon_ico>,
+ <Rule '/news_list' (GET, HEAD, OPTIONS) -> /.get_new_list>,
+ <Rule '/' (GET, HEAD, OPTIONS) -> /.index>,
+ <Rule '/static/<filename>' (GET, HEAD, OPTIONS) -> static>,
+ <Rule '/news/<news_id>' (GET, HEAD, OPTIONS) -> news.news_detail>])
+INFO manage.py:18 Map([<Rule '/passport/image_code' (HEAD, GET, OPTIONS) -> passport.get_image_code>,
+ <Rule '/passport/register' (POST, OPTIONS) -> passport.register>,
+ <Rule '/passport/smscode' (POST, OPTIONS) -> passport.sms_code>,
+ <Rule '/passport/logout' (POST, OPTIONS) -> passport.logout>,
+ <Rule '/passport/login' (POST, OPTIONS) -> passport.login>,
+ <Rule '/news/news_comment' (POST, OPTIONS) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (POST, OPTIONS) -> news.news_collect>,
+ <Rule '/news/comment_like' (POST, OPTIONS) -> news.set_comment_like>,
+ <Rule '/user/base_info' (HEAD, GET, POST, OPTIONS) -> profile.base_info>,
+ <Rule '/user/info' (HEAD, GET, OPTIONS) -> profile.profile_info>,
+ <Rule '/favicon.ico' (HEAD, GET, OPTIONS) -> /.favicon_ico>,
+ <Rule '/news_list' (HEAD, GET, OPTIONS) -> /.get_new_list>,
+ <Rule '/' (HEAD, GET, OPTIONS) -> /.index>,
+ <Rule '/static/<filename>' (HEAD, GET, OPTIONS) -> static>,
+ <Rule '/news/<news_id>' (HEAD, GET, OPTIONS) -> news.news_detail>])
+INFO manage.py:18 Map([<Rule '/passport/image_code' (GET, OPTIONS, HEAD) -> passport.get_image_code>,
+ <Rule '/passport/register' (POST, OPTIONS) -> passport.register>,
+ <Rule '/passport/smscode' (POST, OPTIONS) -> passport.sms_code>,
+ <Rule '/passport/logout' (POST, OPTIONS) -> passport.logout>,
+ <Rule '/passport/login' (POST, OPTIONS) -> passport.login>,
+ <Rule '/news/news_comment' (POST, OPTIONS) -> news.add_news_comment>,
+ <Rule '/news/news_collect' (POST, OPTIONS) -> news.news_collect>,
+ <Rule '/news/comment_like' (POST, OPTIONS) -> news.set_comment_like>,
+ <Rule '/user/base_info' (GET, POST, OPTIONS, HEAD) -> profile.base_info>,
+ <Rule '/user/info' (GET, OPTIONS, HEAD) -> profile.profile_info>,
+ <Rule '/favicon.ico' (GET, OPTIONS, HEAD) -> /.favicon_ico>,
+ <Rule '/news_list' (GET, OPTIONS, HEAD) -> /.get_new_list>,
+ <Rule '/' (GET, OPTIONS, HEAD) -> /.index>,
+ <Rule '/static/<filename>' (GET, OPTIONS, HEAD) -> static>,
+ <Rule '/news/<news_id>' (GET, OPTIONS, HEAD) -> news.news_detail>])
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:24] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:24] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:43] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:45] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:24:45] "GET /passport/image_code?code_id=1078b605-df8e-4e81-8952-cba8068ec3af HTTP/1.1" 200 -
+INFO views.py:73 415163
+DEBUG views.py:75 sms image code content 415163
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:25:12] "POST /passport/smscode HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:25:39] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:25:39] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:25:39] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:25:39] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:25:48] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:25:48] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:25:51] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:25:56] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:25:56] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:26:28] "POST /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:26:37] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:26:37] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:26:37] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:26:45] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [19/Dec/2018 00:26:45] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:58] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:59] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:59] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:59] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:59] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:59] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:59] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:59] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:59] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:59] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:33:59] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:34:02] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:34:14] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:34:14] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:34:14] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:34:14] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:34:17] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:34:17] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:34:17] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:34:21] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:34:21] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:35:24] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:35:25] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:35:48] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:35:48] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:36:23] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:36:23] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:00] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:00] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:00] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:08] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:08] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:10] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:10] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:11] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:11] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:13] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:13] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:14] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:15] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:21] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:21] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:23] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:23] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 14:37:23] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:20] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:20] "GET /user/info HTTP/1.1" 302 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:21] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:24] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:26] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:26] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:26] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:26] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:28] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:28] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:28] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:28] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:30] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:00:30] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:20] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:20] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:22] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:22] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:24] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:24] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /user/info HTTP/1.1" 302 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:50] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:52] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:54] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:54] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:54] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:54] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:56] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:56] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:56] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:02:56] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:03:02] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:03:02] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:03:02] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:03:38] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:03:38] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:03:39] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:03:49] "GET /user/pic_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:03:49] "GET /user/pic_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:03:49] "GET /static/news/js/user_pic_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:03:49] "GET /static/news/js/jquery.form.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:37:48] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:37:49] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:37:51] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:37:51] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:37:53] "GET /user/pic_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:37:53] "GET /user/pic_info HTTP/1.1" 200 -
+ERROR app.py:1761 Exception on /user/pic_info [POST]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:38:11] "POST /user/pic_info HTTP/1.1" 500 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG connectionpool.py:813 Starting new HTTPS connection (1): uc.qbox.me:443
+DEBUG connectionpool.py:393 https://uc.qbox.me:443 "GET /v1/query?ak=bWsi94eq04NNL9I7Zud3iJY6q3DRTeagdY4wlmmD&bucket=xiezhou HTTP/1.1" 200 238
+DEBUG retry.py:210 Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG connectionpool.py:205 Starting new HTTP connection (1): up.qiniu.com:80
+DEBUG connectionpool.py:393 http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+ERROR views.py:95 'scoped_session' object has no attribute 'commiy'
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG retry.py:210 Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG connectionpool.py:205 Starting new HTTP connection (1): up.qiniu.com:80
+DEBUG connectionpool.py:393 http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:40:31] "POST /user/pic_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:40:47] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:40:47] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:40:47] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:42:24] "GET /user/pic_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:42:24] "GET /user/pic_info HTTP/1.1" 200 -
+DEBUG connectionpool.py:240 Resetting dropped connection: up.qiniu.com
+DEBUG connectionpool.py:393 http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:43:08] "POST /user/pic_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:43:25] "GET /user/user_follow HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:43:25] "GET /user/user_follow HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:44:02] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:44:02] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:44:02] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:50] "GET /user/user_follow HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:50] "GET /user/user_follow HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:51] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:51] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:54] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:54] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:54] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:56] "GET /user/pic_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:58] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:58] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 15:48:58] "GET /static/news/js/user_pass_info.js HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:32] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:33] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:33] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:33] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:33] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:33] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:33] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:33] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:33] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:33] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:33] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:34] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:36] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:36] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:36] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:38] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:38] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:38] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:40] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:40] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:40] "GET /static/news/js/user_pass_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:47] "POST /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:02:49] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:03:24] "POST /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:03:27] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:05:48] "POST /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:05:50] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:06:47] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:06:47] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:06:47] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:06:50] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:06:50] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:09] "POST /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:13] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:17] "POST /passport/logout HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:17] "GET /user/info HTTP/1.1" 302 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:17] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:18] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:25] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:25] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:25] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:27] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:27] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:29] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:07:29] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:10:24] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:10:24] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:10:24] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET /user/info HTTP/1.1" 302 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:11] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:12] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:12] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:13] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:15] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:15] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:15] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:21] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:21] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:21] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:22] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:22] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:11:22] "GET /static/news/js/user_pass_info.js HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:38] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:40] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:40] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:40] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:40] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:40] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:40] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:40] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:40] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:40] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:40] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:42] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:43] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:43] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:43] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:45] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:45] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:45] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:47] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:47] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:12:47] "GET /static/news/js/user_pass_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:13:19] "POST /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:13:20] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:13:22] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:13:22] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:13:22] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:47] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:47] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:47] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:47] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:47] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:47] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:47] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:47] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:47] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:48] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:48] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:49] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:50] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:59] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:59] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:32:59] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:02] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:02] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:02] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:06] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:06] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:06] "GET /static/news/js/jquery.pagination.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:06] "GET /static/news/css/jquery.pagination.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:45] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:45] "GET /user/base_info HTTP/1.1" 200 -
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:59] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:33:59] "GET /user/collection HTTP/1.1" 200 -
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:01] "GET /user/collection HTTP/1.1" 200 -
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:08] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:22] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:23] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:25] "GET /news/1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:25] "GET /static/news/js/detail.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:25] "GET /static/news/images/cat.jpg HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:25] "GET /static/news/images/comment_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:25] "GET /static/news/images/collect_icons.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:30] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:34] "GET /news/149 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:36] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:41] "GET /news/21 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:44] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:48] "GET /news/2 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:51] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:54] "GET /news_list?cid=1&page=2 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:56] "GET /news/33 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:35:58] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:36:01] "GET /news_list?cid=1&page=2 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:36:03] "GET /news/3 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:36:05] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:36:09] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:36:10] "GET /user/base_info HTTP/1.1" 200 -
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:36:46] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:36:53] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:37:25] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:37:25] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:37:25] "GET /favicon.ico HTTP/1.1" 200 -
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:14] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:14] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:14] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:16] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:16] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:16] "GET /static/news/js/user_pass_info.js HTTP/1.1" 200 -
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:21] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:47] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:47] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:47] "GET /favicon.ico HTTP/1.1" 200 -
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:56] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:38:56] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:01] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:01] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:04] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:04] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:07] "GET /news/28 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:10] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:15] "GET /news/1154 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:18] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:23] "GET /news/1154 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:28] "GET /news_list?cid=1&page=2 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:29] "GET /news/33 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:34] "GET /news_list?cid=1&page=2 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:35] "GET /news_list?cid=1&page=3 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:36] "GET /news/12 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:40] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:45] "GET /news_list?cid=1&page=2 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:46] "GET /news_list?cid=1&page=3 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:47] "GET /news/15 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:50] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:53] "GET /news_list?cid=1&page=2 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:39:56] "GET /news/3 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:00] "GET /news_list?cid=1&page=2 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:01] "GET /news_list?cid=1&page=3 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:02] "GET /news_list?cid=1&page=4 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:03] "GET /news/38 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:08] "POST /news/news_collect HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:15] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:15] "GET /user/base_info HTTP/1.1" 200 -
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:17] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:17] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:19] "GET /user/collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:40:26] "GET /user/collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:41:10] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:41:10] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:41:25] "POST /user/base_info HTTP/1.1" 200 -
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR views.py:144 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:42:19] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:42:19] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:42:24] "GET /news/33 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:42:32] "GET /user/news_release HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:42:32] "GET /user/news_release HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:43:12] "GET /user/news_release HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:43:12] "GET /user/news_release HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:44:17] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:44:18] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:57:42] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:57:42] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:57:44] "GET /user/news_release HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:57:44] "GET /user/news_release HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:57:48] "GET /user/news_list HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:57:48] "GET /user/news_list HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:57:49] "GET /user/news_list HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:57:50] "GET /user/news_release HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:57:50] "GET /user/news_release HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:03] "GET /user/news_release HTTP/1.1" 404 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:30] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:30] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:30] "GET /static/news/js/user_news_release.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:30] "GET /static/news/js/tinymce_setup.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:30] "GET /static/news/tinymce/js/tinymce/tinymce.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:30] "GET /static/news/tinymce/js/tinymce/themes/modern/theme.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/image/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/link/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/lists/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/langs/zh_CN.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/advlist/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/autolink/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/charmap/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/print/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/preview/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/hr/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/anchor/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/pagebreak/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/spellchecker/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/searchreplace/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/code/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/wordcount/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/visualchars/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/visualblocks/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/fullscreen/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/insertdatetime/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/media/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/nonbreaking/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/save/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/table/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/contextmenu/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/directionality/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/textcolor/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/paste/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/template/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/codesample/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/jquery.iframe-post-form.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/css/style.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/skins/lightgray/skin.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/img/icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/skins/lightgray/content.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/skins/lightgray/fonts/tinymce.woff HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/skins/lightgray/skin.min.css.map HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:31] "GET /static/news/tinymce/js/tinymce/plugins/codesample/css/prism.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:45] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:45] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:45] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:50] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:50] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 16:58:50] "GET /static/news/tinymce/js/tinymce/skins/lightgray/skin.min.css.map HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:02:05] "GET /user/news_list HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:02:05] "GET /user/news_list HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:10:13] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:10:13] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:18] "GET /user/info HTTP/1.1" 302 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:19] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:21] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:23] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:30] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:30] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:30] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:36] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:36] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:36] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:39] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:39] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:39] "GET /static/news/js/user_pass_info.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:41] "GET /user/pass_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:41] "GET /user/pass_info HTTP/1.1" 200 -
+ERROR views.py:145 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR views.py:145 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:43] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:43] "GET /user/collection HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:43] "GET /static/news/css/jquery.pagination.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:43] "GET /static/news/js/jquery.pagination.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:45] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:45] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:49] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:49] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:53] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:27:53] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:28:03] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:28:03] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:28:57] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:28:57] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:11] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:11] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/tinymce.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/js/tinymce_setup.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/js/jquery.form.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/js/user_news_release.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/themes/modern/theme.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/lists/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/image/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/langs/zh_CN.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/autolink/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/advlist/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/link/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/print/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/charmap/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/preview/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/pagebreak/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/anchor/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/hr/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/wordcount/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/spellchecker/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/searchreplace/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/visualchars/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/visualblocks/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/code/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/fullscreen/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/media/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/nonbreaking/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/insertdatetime/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/save/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/table/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/contextmenu/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/template/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/directionality/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/paste/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/textcolor/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/codesample/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:47] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:48] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/css/style.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:48] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/jquery.iframe-post-form.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:48] "GET /static/news/tinymce/js/tinymce/skins/lightgray/skin.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:48] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/img/icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:48] "GET /static/news/tinymce/js/tinymce/skins/lightgray/content.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:48] "GET /static/news/tinymce/js/tinymce/skins/lightgray/fonts/tinymce.woff HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:29:48] "GET /static/news/tinymce/js/tinymce/plugins/codesample/css/prism.css HTTP/1.1" 200 -
+DEBUG retry.py:210 Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG connectionpool.py:205 Starting new HTTP connection (1): up.qiniu.com:80
+DEBUG connectionpool.py:393 http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:30:49] "POST /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:30:49] "GET /user/news_list HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:30:59] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:30:59] "GET /user/news_release HTTP/1.1" 200 -
+DEBUG connectionpool.py:393 http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:31:26] "POST /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:31:26] "GET /user/news_list HTTP/1.1" 404 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:47:27] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:47:28] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+ERROR app.py:1761 Exception on /user/news_list [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 248, in news_list
+    return render_template('news/user_news_list.html')
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user_news_list.html", line 15, in top-level template code
+    {% for news in data.news_list %}
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+ERROR app.py:1761 Exception on /user/news_list [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 248, in news_list
+    return render_template('news/user_news_list.html')
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user_news_list.html", line 15, in top-level template code
+    {% for news in data.news_list %}
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:48:13] "GET /user/news_list HTTP/1.1" 500 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:48:13] "GET /user/news_list HTTP/1.1" 500 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1761 Exception on /user/news_list [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 248, in news_list
+    # get page
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user_news_list.html", line 15, in top-level template code
+    {% for news in data.news_list %}
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+ERROR app.py:1761 Exception on /user/news_list [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 248, in news_list
+    # get page
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user_news_list.html", line 15, in top-level template code
+    {% for news in data.news_list %}
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:49:15] "GET /user/news_list HTTP/1.1" 500 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:49:15] "GET /user/news_list HTTP/1.1" 500 -
+ERROR app.py:1761 Exception on /user/news_list [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 248, in news_list
+    # get page
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user_news_list.html", line 15, in top-level template code
+    {% for news in data.news_list %}
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:49:42] "GET /user/news_list HTTP/1.1" 500 -
+ERROR app.py:1761 Exception on /user/news_list [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 248, in news_list
+    # get page
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user_news_list.html", line 15, in top-level template code
+    {% for news in data.news_list %}
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+ERROR app.py:1761 Exception on /user/news_list [GET]
+Traceback (most recent call last):
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/utils/common.py", line 31, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/modules/profile/views.py", line 248, in news_list
+    # get page
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xurunjie/Desktop/info/flask_project/info/templates/news/user_news_list.html", line 15, in top-level template code
+    {% for news in data.news_list %}
+  File "/Users/xurunjie/workspace/py_flask/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:49:42] "GET /user/news_list HTTP/1.1" 500 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:49:42] "GET /user/news_list HTTP/1.1" 500 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /user/info HTTP/1.1" 302 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:23] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:25] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:27] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:27] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:28] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:29] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:29] "GET /user/base_info HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:29] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+ERROR views.py:271 'NoneType' object has no attribute 'id'
+ERROR views.py:271 'NoneType' object has no attribute 'id'
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:34] "GET /user/news_list HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:34] "GET /user/news_list HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:34] "GET /user/news_list HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:34] "GET /user/news_list HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:34] "GET /static/news/css/jquery.pagination.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:34] "GET /static/news/js/jquery.pagination.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/js/jquery.form.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/js/tinymce_setup.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/tinymce.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/js/user_news_release.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/themes/modern/theme.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/link/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/lists/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/langs/zh_CN.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/autolink/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/image/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/advlist/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/charmap/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/print/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/anchor/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/preview/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/hr/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/pagebreak/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/spellchecker/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/searchreplace/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/visualchars/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/wordcount/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/visualblocks/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/code/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/fullscreen/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/nonbreaking/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/insertdatetime/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/media/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/table/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/save/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/contextmenu/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/directionality/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/template/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/paste/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/codesample/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/textcolor/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/plugin.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/css/style.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/jquery.iframe-post-form.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/skins/lightgray/skin.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/imageupload/img/icon.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/skins/lightgray/content.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/skins/lightgray/fonts/tinymce.woff HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:50:50] "GET /static/news/tinymce/js/tinymce/plugins/codesample/css/prism.css HTTP/1.1" 200 -
+DEBUG retry.py:210 Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG connectionpool.py:205 Starting new HTTP connection (1): up.qiniu.com:80
+DEBUG connectionpool.py:393 http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:51:44] "POST /user/news_release HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 17:51:47] "GET /user/news_list HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:10:43] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:10:43] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:10:49] "GET /asd HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:10:49] "GET /static/news/images/not_found.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:10:53] "POST /passport/logout HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:10:54] "GET /asd HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:10:59] "GET /aasdasd HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:11:01] "GET /index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:11:02] "GET /index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:11:56] "GET /index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:11:57] "GET /index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:11:59] "GET /index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:11:59] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:12:00] "GET /index.html HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:12:08] "GET /index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:12:17] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:12:17] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:12:25] "GET /asdasd HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:12:27] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [23/Dec/2018 18:12:28] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -

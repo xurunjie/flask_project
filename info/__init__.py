@@ -1,16 +1,19 @@
 import redis
 import logging
 from logging.handlers import RotatingFileHandler
-from flask import Flask
+from flask import Flask, g, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import CSRFProtect
 from flask_session import Session
 
 # we can use db.init to set db again
+from info.utils.common import user_login_data
 
 db = SQLAlchemy()
 
 redis_store = None
+
+
 def setup_log(config_name):
     """config of log module"""
 
@@ -45,11 +48,21 @@ def create_app(config_name):
     def after_request(response):
         csrf_token = generate_csrf()
         # pass a value by cookie to client
-        response.set_cookie('csrf_token',csrf_token)
+        response.set_cookie('csrf_token', csrf_token)
         return response
 
+    # 404 error page
+    @app.errorhandler(404)
+    @user_login_data
+    def page_not_found(e):
+        user = g.user
+        data = {
+            'user_info': user.to_dict() if user else None
+        }
+        return render_template('news/404.html', data=data)
+
     from info.utils.common import do_index_class
-    app.add_template_filter(do_index_class,"index_class")
+    app.add_template_filter(do_index_class, "index_class")
     # create flask session extension
     Session(app)
 

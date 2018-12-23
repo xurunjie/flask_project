@@ -9,5 +9,39 @@ $(function () {
         e.preventDefault();
 
         // TODO 修改密码
+        var params = {};
+        $(this).serializeArray().map(function (x) {
+            params[x.name] = x.value;
+        });
+        // 取到两次密码进行判断
+        var new_password = params["new_password"];
+        var new_password2 = params["new_password2"];
+        if(new_password.length<8){
+            alert('新密码长度不能小于8位');
+            return
+        }
+        if (new_password != new_password2) {
+            alert('两次密码输入不一致');
+            return
+        }
+
+        $.ajax({
+            url: "/user/pass_info",
+            type: "post",
+            contentType: "application/json",
+            headers: {
+                "X-CSRFToken": getCookie("csrf_token")
+            },
+            data: JSON.stringify(params),
+            success: function (resp) {
+                if (resp.error == "0") {
+                    // 修改成功
+                    alert("修改成功");
+                    window.location.reload()
+                } else {
+                    alert(resp.errmsg)
+                }
+            }
+        })
     })
 })

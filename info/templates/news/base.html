@@ -13,7 +13,7 @@
 <body>
 <div class="header_con">
     <div class="header">
-        <a href="#" class="logo fl"><img src="../../static/news/images/logo.png" alt="logo"></a>
+        <a href="/" class="logo fl"><img src="../../static/news/images/logo.png" alt="logo"></a>
         <ul class="menu fl">
             {% block CategoryBlock %}
                 {% for category in data.categories %}
@@ -30,8 +30,8 @@
                 <img src="
                         {% if data.user_info.avatar_url %}{{ data.user_info.avatar_url }}{% else %}../../static/news/images/person01.png{% endif %}"
                      class="lgin_pic">
-                <a href="#">{{ data.user_info.nick_name }}</a>
-                <a href="#" onclick="logout()">退出</a>
+                <a href="/user/info">{{ data.user_info.nick_name }}</a>
+                <a href="javascript:;" onclick="logout()">退出</a>
             </div>
         {% else %}
             <div class="user_btns fr">
@@ -64,21 +64,23 @@
     {% endblock %}
 
 </div>
-<div class="footer">
-    <div class="footer_links">
-        <a href="">关于我们</a>
-        <span>|</span>
-        <a href="">联系我们</a>
-        <span>|</span>
-        <a href="">招聘人才</a>
-        <span>|</span>
-        <a href="">友情链接</a>
+{% block BottomBlock %}
+    <div class="footer">
+        <div class="footer_links">
+            <a href="">关于我们</a>
+            <span>|</span>
+            <a href="">联系我们</a>
+            <span>|</span>
+            <a href="">招聘人才</a>
+            <span>|</span>
+            <a href="">友情链接</a>
+        </div>
+        <p class="copyright">
+            CopyRight © 2018 新经资讯信息技术有限公司 All Rights Reserved<br/>
+            电话：010-****888 京ICP备*******8号
+        </p>
     </div>
-    <p class="copyright">
-        CopyRight © 2018 新经资讯信息技术有限公司 All Rights Reserved<br/>
-        电话：010-****888 京ICP备*******8号
-    </p>
-</div>
+{% endblock %}
 
 <!-- 登录表单 -->
 <form class="login_form_con">
