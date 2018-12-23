@@ -1,7 +1,7 @@
-from flask import g, request, render_template, redirect, jsonify, current_app, session
+from flask import g, request, render_template, redirect, jsonify, current_app, session, abort
 
 from info import db, constants
-from info.models import Category, News
+from info.models import Category, News, User
 from info.utils.image_storage import storage
 from info.utils.response_code import RET
 from . import profile_blue
@@ -244,7 +244,6 @@ def news_release():
 @profile_blue.route('/news_list')
 @user_login_data
 def news_list():
-
     # get page
     page = request.args.get('page', 1)
 
@@ -279,3 +278,114 @@ def news_list():
     }
 
     return render_template('news/user_news_list.html', data=data)
+
+
+@profile_blue.route('/user_follow')
+@user_login_data
+def user_follow():
+    # get args of page
+    page = request.args.get('page')
+
+    try:
+        page = int(page)
+    except Exception as e:
+        current_app.logger.error(e)
+        page = 1
+
+    user = g.user
+
+    follows = list()
+    current_page = 1
+    total_page = 1
+
+    try:
+        paginate = user.followers.paginate(page, constants.USER_FOLLOWED_MAX_COUNT, False)
+        follows = paginate.items
+        current_page = paginate.page
+        total_page = paginate.pages
+    except Exception as e:
+        current_app.logger.error(e)
+
+    user_dict_li = [follow_user.to_dict() for follow_user in follows]
+
+    data = {
+        'users': user_dict_li,
+        'total_page': total_page,
+        'current_page': current_page
+    }
+    return render_template('news/user_follow.html', data=data)
+
+
+@profile_blue.route('/other_info')
+@user_login_data
+def other_info():
+    """query user infomations"""
+    user = g.user
+
+    # get other people id
+    user_id = request.args.get("id")
+    if not user_id:
+        abort(404)
+
+    # query user model
+    other = None
+    try:
+        other = User.query.get(user_id)
+    except Exception as e:
+        current_app.logger.error(e)
+
+    if not other:
+        abort(404)
+
+    # verify followed
+    is_followed = False
+    if g.user:
+        if other.followers.filter(User.id == user.id).count() > 0:
+            is_followed = True
+
+    data = {
+        "user_info": user.to_dict(),
+        "other_info": other.to_dict(),
+        "is_followed": is_followed
+    }
+    return render_template('news/other.html', data=data)
+
+
+@profile_blue.route('/other_news_list')
+def other_news_list():
+    # 获取页数
+    page = request.args.get("page", 1)
+    user_id = request.args.get("user_id")
+    try:
+        page = int(page)
+    except Exception as e:
+        current_app.logger.error(e)
+        page = 1
+
+    if not all([page, user_id]):
+        return jsonify(errno=RET.PARAMERR, errmsg="params error")
+
+    try:
+        user = User.query.get(user_id)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg="query error")
+
+    if not user:
+        return jsonify(errno=RET.NODATA, errmsg="user is not login")
+
+    try:
+        paginate = News.query.filter(News.user_id == user.id).paginate(page, constants.OTHER_NEWS_PAGE_MAX_COUNT, False)
+        news_li = paginate.items
+        current_page = paginate.page
+        total_page = paginate.pages
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg="query databases failed")
+
+    news_dict_li = []
+
+    for news_item in news_li:
+        news_dict_li.append(news_item.to_review_dict())
+    data = {"news_list": news_dict_li, "total_page": total_page, "current_page": current_page}
+    return jsonify(errno=RET.OK, errmsg="OK", data=data)

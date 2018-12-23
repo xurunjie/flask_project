@@ -235,3 +235,48 @@ def set_comment_like():
         return jsonify(error=RET.DBERR, errmsg='oprating failed')
 
     return jsonify(error=RET.OK, errmsg='oprating success')
+
+
+@news_blue.route('/followed_user', methods=['POST'])
+@user_login_data
+def followed_user():
+    """follow and cancel followed"""
+    if not g.user:
+        return jsonify(error=RET.SESSIONERR, errmsg='user is not login')
+
+    user_id = request.json.get('user_id')
+    action = request.json.get('action')
+
+    if not all([user_id, action]):
+        return jsonify(error=RET.PARAMERR, errmsg='params is not full')
+
+    if action not in ('follow', 'unfollow'):
+        return jsonify(error=RET.PARAMERR, errmsg='params error')
+
+    # query followed user infomations
+    try:
+        target_user = User.query.get(user_id)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(error=RET.DBERR, errmsg='query database error')
+
+    if not target_user:
+        return jsonify(error=RET.NODATA, errmsg='query user failed')
+
+    if action == 'follow':
+        if target_user.followers.filter(User.id == g.user.id).count() > 0:
+            return jsonify(error=RET.DATAEXIST, errmsg='current user is followed')
+
+        target_user.followers.append(g.user)
+    else:
+        if target_user.followers.filter(User.id==g.user.id).count()>0:
+            target_user.followers.remove(g.user)
+
+    try:
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(error=RET.DBERR,errmsg='save data failed')
+
+    return jsonify(error=RET.OK,errmsg='operate success')
+

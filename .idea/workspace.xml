@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ed9f0d4-21d3-4a36-994b-87840f4a5a51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/info/utils/image_storage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info/modules/admin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info/modules/admin/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info/templates/admin/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/modules/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/modules/news/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info/modules/profile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/modules/profile/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/html/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/html/user_base_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/user_base_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/html/user_collection.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/user_collection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/html/user_news_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/user_news_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/html/user_news_release.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/user_news_release.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/html/user_pass_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/user_pass_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/html/user_pic_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/user_pic_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/js/user_base_info.js" beforeDir="false" afterPath="$PROJECT_DIR$/info/static/news/js/user_base_info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/js/user_news_release.js" beforeDir="false" afterPath="$PROJECT_DIR$/info/static/news/js/user_news_release.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/js/user_pass_info.js" beforeDir="false" afterPath="$PROJECT_DIR$/info/static/news/js/user_pass_info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/static/news/js/user_pic_info.js" beforeDir="false" afterPath="$PROJECT_DIR$/info/static/news/js/user_pic_info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/templates/news/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/templates/news/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/static/admin/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/static/news/html/other.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/other.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/static/news/html/user_follow.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/news/user_follow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/static/news/js/other.js" beforeDir="false" afterPath="$PROJECT_DIR$/info/static/news/js/other.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/static/news/js/user_follow.js" beforeDir="false" afterPath="$PROJECT_DIR$/info/static/news/js/user_follow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/b921c8f0a84b_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/603aceef1e81_init.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +25,7 @@
     <SUITE FILE_PATH="coverage/flask_project$sms.coverage" NAME="sms Coverage Results" MODIFIED="1544355335436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/info/libs/yuntongxun" />
     <SUITE FILE_PATH="coverage/flask_project$captcha.coverage" NAME="captcha Coverage Results" MODIFIED="1544345636421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/info/utils/captcha" />
     <SUITE FILE_PATH="coverage/flask_project$Flask__manage_py___1_.coverage" NAME="Flask (manage.py) (1) Coverage Results" MODIFIED="1545060348457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/flask_project$Flask__manage_py_.coverage" NAME="Flask (manage.py) Coverage Results" MODIFIED="1545559925343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask_project$Flask__manage_py_.coverage" NAME="Flask (manage.py) Coverage Results" MODIFIED="1545583923725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask_project$views__1_.coverage" NAME="views (1) Coverage Results" MODIFIED="1544867901540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/info/modules/index" />
     <SUITE FILE_PATH="coverage/flask_project$views.coverage" NAME="views Coverage Results" MODIFIED="1544457191463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/info/modules/passport" />
   </component>
@@ -87,15 +78,15 @@
         <counts>
           <entry key="css" value="2" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="29" />
+          <entry key="html" value="34" />
           <entry key="ico" value="1" />
           <entry key="info_news" value="2" />
           <entry key="info_user" value="1" />
           <entry key="ini" value="1" />
-          <entry key="js" value="20" />
+          <entry key="js" value="25" />
           <entry key="json" value="1" />
           <entry key="log" value="2" />
-          <entry key="py" value="100" />
+          <entry key="py" value="108" />
           <entry key="sql" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -104,13 +95,13 @@
         <counts>
           <entry key="CSS" value="2" />
           <entry key="Database Element" value="3" />
-          <entry key="HTML" value="29" />
+          <entry key="HTML" value="34" />
           <entry key="Image" value="1" />
           <entry key="Ini" value="1" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="20" />
+          <entry key="JavaScript" value="25" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="100" />
+          <entry key="Python" value="108" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -119,19 +110,19 @@
           <entry key="cell" value="1" />
           <entry key="css" value="1" />
           <entry key="gitignore" value="11" />
-          <entry key="html" value="1551" />
-          <entry key="js" value="1634" />
-          <entry key="py" value="18459" />
-          <entry key="txt" value="403" />
+          <entry key="html" value="1554" />
+          <entry key="js" value="1643" />
+          <entry key="py" value="20385" />
+          <entry key="txt" value="453" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="HTML" value="1552" />
-          <entry key="JavaScript" value="1631" />
-          <entry key="PLAIN_TEXT" value="414" />
-          <entry key="Python" value="18459" />
+          <entry key="HTML" value="1555" />
+          <entry key="JavaScript" value="1640" />
+          <entry key="PLAIN_TEXT" value="464" />
+          <entry key="Python" value="20385" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -142,96 +133,95 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/info/modules/profile/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="248" selection-start-line="248" selection-end-line="248" />
+            <state relative-caret-position="347">
+              <caret line="312" selection-start-line="312" selection-end-line="313" />
               <folding>
-                <element signature="e#0#86#0" expanded="true" />
+                <element signature="e#0#93#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/info/modules/profile/__init__.py">
+        <entry file="file://$PROJECT_DIR$/info/templates/news/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="91">
+              <caret line="96" column="23" lean-forward="true" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/info/__init__.py">
+        <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-116">
-              <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+            <state relative-caret-position="190">
+              <caret line="10" selection-start-line="10" selection-end-line="11" />
               <folding>
-                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/info/static/news/html/user_follow.html">
+        <entry file="file://$PROJECT_DIR$/info/templates/news/other.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-956" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/info/templates/news/user_news_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="809">
-              <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/info/utils/image_storage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="566">
+              <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/info/templates/news/user_news_release.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/info/templates/admin/login.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/info/static/news/js/user_news_release.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="22" column="49" lean-forward="true" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/info/templates/news/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1204">
-              <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/info/modules/admin/views.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/info/templates/news/404.html">
+        <entry file="file://$PROJECT_DIR$/info/modules/admin/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="19">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/info/static/news/js/other.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="509">
+              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/info/modules/news/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="83" column="31" lean-forward="true" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#83#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/info/static/news/js/user_follow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -257,6 +247,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
       <GitPushTagMode />
@@ -282,7 +273,6 @@
         <option value="$PROJECT_DIR$/info/modules/index/views.py" />
         <option value="$PROJECT_DIR$/info/templates/news/detail.html" />
         <option value="$PROJECT_DIR$/info/static/news/js/detail.js" />
-        <option value="$PROJECT_DIR$/info/modules/news/views.py" />
         <option value="$PROJECT_DIR$/info/modules/profile/__init__.py" />
         <option value="$PROJECT_DIR$/info/models.py" />
         <option value="$PROJECT_DIR$/info/templates/news/user_base_info.html" />
@@ -299,10 +289,18 @@
         <option value="$PROJECT_DIR$/info/templates/news/user_news_release.html" />
         <option value="$PROJECT_DIR$/info/static/news/js/user_news_release.js" />
         <option value="$PROJECT_DIR$/info/templates/news/user_news_list.html" />
-        <option value="$PROJECT_DIR$/info/modules/profile/views.py" />
         <option value="$PROJECT_DIR$/info/templates/news/base.html" />
         <option value="$PROJECT_DIR$/info/__init__.py" />
         <option value="$PROJECT_DIR$/info/templates/news/404.html" />
+        <option value="$PROJECT_DIR$/info/templates/news/user_follow.html" />
+        <option value="$PROJECT_DIR$/info/modules/news/views.py" />
+        <option value="$PROJECT_DIR$/info/static/news/js/user_follow.js" />
+        <option value="$PROJECT_DIR$/info/templates/news/other.html" />
+        <option value="$PROJECT_DIR$/info/modules/profile/views.py" />
+        <option value="$PROJECT_DIR$/info/static/news/js/other.js" />
+        <option value="$PROJECT_DIR$/info/templates/admin/login.html" />
+        <option value="$PROJECT_DIR$/info/modules/admin/views.py" />
+        <option value="$PROJECT_DIR$/info/modules/admin/__init__.py" />
       </list>
     </option>
   </component>
@@ -312,9 +310,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="273" />
-    <option name="y" value="47" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="304" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="822" />
   </component>
@@ -340,6 +338,19 @@
               <item name="flask_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask_project" type="462c0819:PsiDirectoryNode" />
               <item name="info" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask_project" type="462c0819:PsiDirectoryNode" />
+              <item name="info" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask_project" type="462c0819:PsiDirectoryNode" />
+              <item name="info" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -353,7 +364,7 @@
               <item name="flask_project" type="462c0819:PsiDirectoryNode" />
               <item name="info" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flask_project" type="b2602c69:ProjectViewProjectNode" />
@@ -375,10 +386,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/info/templates/admin" />
       <recent name="$PROJECT_DIR$/info/templates/news" />
       <recent name="$PROJECT_DIR$/info/static" />
       <recent name="$PROJECT_DIR$/info/templates" />
@@ -652,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545061668272</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="achieve all of user features">
+      <created>1545560007033</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1545560007034</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -665,25 +684,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="822" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21816881" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2160229" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4561644" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.30120483" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.29863015" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963988" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32831737" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.49928468" weight="0.32968536" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.2995896" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3269494" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32968536" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32963988" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -718,7 +737,8 @@
     <MESSAGE value="achieve datail page and template pull way" />
     <MESSAGE value="new's comment and API achieve" />
     <MESSAGE value="achieve comment like and comment like" />
-    <option name="LAST_COMMIT_MESSAGE" value="achieve comment like and comment like" />
+    <MESSAGE value="achieve all of user features" />
+    <option name="LAST_COMMIT_MESSAGE" value="achieve all of user features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -835,47 +855,48 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/info/modules/profile/views.py</url>
-          <line>248</line>
+          <line>247</line>
           <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/info/modules/news/views.py</url>
+          <line>243</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/info/modules/news/views.py</url>
+          <line>271</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/info/modules/profile/views.py</url>
+          <line>286</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/info/modules/profile/views.py</url>
+          <line>310</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/info/modules/profile/views.py</url>
+          <line>315</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/info/modules/profile/views.py</url>
+          <line>308</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/info/modules/profile/views.py</url>
+          <line>312</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/workspace/py_flask/lib/python3.7/site-packages/flask/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/py_flask/lib/python3.7/site-packages/werkzeug/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="344" selection-start-line="344" selection-end-line="344" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/info/utils/response_code.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/info/static/news/js/tinymce_setup.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/info/static/news/js/other.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/py_flask/lib/python3.7/site-packages/flask/globals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f7e11d33-ebee-42c8-bce0-c1bd532a8b54/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -900,34 +921,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/info/utils/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/info/static/news/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5282">
           <caret line="278" column="13" lean-forward="true" selection-start-line="278" selection-start-column="13" selection-end-line="278" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/info/static/news/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="462" selection-start-line="462" selection-end-line="462" />
         </state>
       </provider>
     </entry>
@@ -948,23 +945,6 @@
     <entry file="file://$PROJECT_DIR$/info/static/news/tinymce/changelog.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/info/modules/news/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4389">
-          <caret line="237" selection-start-line="237" selection-end-line="237" />
-          <folding>
-            <element signature="e#0#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/info/static/news/js/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3249">
-          <caret line="171" column="40" selection-start-line="171" selection-start-column="40" selection-end-line="171" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -974,13 +954,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/migrations/alembic.ini">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/info/templates/news/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/info/templates/news/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1051,9 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/info/static/news/js/user_follow.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/info/static/admin/js/jquery.pagination.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1061,27 +1031,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/info/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/info/templates/news/user_base_info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/info/static/news/js/user_base_info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1120,11 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/info/static/news/html/user_follow.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-956" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/info/templates/news/user_news_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="809">
@@ -1149,16 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/info/modules/profile/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="248" selection-start-line="248" selection-end-line="248" />
-          <folding>
-            <element signature="e#0#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/info/modules/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1169,20 +1107,151 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/info/templates/news/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/utils/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/static/news/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/static/news/js/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1935">
+          <caret line="171" column="40" selection-start-line="171" selection-start-column="40" selection-end-line="171" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/info/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-116">
-          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        <state relative-caret-position="153">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/info/templates/news/404.html">
+    <entry file="file://$PROJECT_DIR$/info/static/news/js/user_base_info.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="462" selection-start-line="462" selection-end-line="462" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/templates/news/user_follow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/static/news/js/user_follow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/modules/profile/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="312" selection-start-line="312" selection-end-line="313" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/templates/news/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="96" column="23" lean-forward="true" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/modules/news/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="83" column="31" lean-forward="true" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/static/news/js/other.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/templates/news/other.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/templates/admin/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/modules/admin/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/modules/admin/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
