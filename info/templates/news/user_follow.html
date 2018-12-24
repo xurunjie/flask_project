@@ -16,14 +16,18 @@
 
     {% for user in data.users %}
         <li class="author_card card_list">
-            <a href="/user/other_info?id={{ data.news.author.id }}" class="author_pic"><img
+            <a href="/user/other_info?id={{ user.id }}" class="author_pic" target="_blank"><img
                     src="{% if user.avatar_url %}
             {{ user.avatar_url }}
             {% else %}
             ../../static/news/images/user_pic.png
             {% endif %}" alt="author_pic"></a>
-            <a href="/user/other_info?id={{ data.news.author.id }}" class="author_name">{{ user.nick_name }}</a>
+            <a href="/user/other_info?id={{ user.id }}" class="author_name" target="_blank">{{ user.nick_name }}</a>
+            {% if user.signature=='' %}
+                <div class="author_resume">None</div>
+            {% else %}
             <div class="author_resume">{{ user.signature }}</div>
+            {% endif %}
             <div class="writings"><span>总篇数</span><b>{{ user.news_count }}</b></div>
             <div class="follows"><span>粉丝</span><b>{{ user.followers_count }}</b></div>
             <a href="javascript:;" class="focused fr" data-userid="{{ user.id }}"><span class="out">已关注</span><span

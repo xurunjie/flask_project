@@ -99,7 +99,7 @@ def add_news_comment():
     """
     user = g.user
     if not user:
-        return jsonify(error=RET.SERVERERR, errmsg='user is not login')
+        return jsonify(error=RET.SERVERERR, errmsg='用户未登录')
     # get params
     data = request.json
     news_id = data.get('news_id')
@@ -107,16 +107,16 @@ def add_news_comment():
     parent_id = data.get('parent_id')
     # verify all params
     if not all([news_id, comment_str]):
-        return jsonify(error=RET.PARAMERR, errmsg='params is not full')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
 
     try:
         news = News.query.get(news_id)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DBERR, errmsg='query data failed')
+        return jsonify(error=RET.DBERR, errmsg='数据查询错误')
 
     if not news:
-        return jsonify(error=RET.NODATA, errmsg='this new is not actived')
+        return jsonify(error=RET.NODATA, errmsg='新闻不存在')
 
     # init model data for comment
     comment = Comment()
@@ -132,9 +132,9 @@ def add_news_comment():
         db.session.commit()
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DBERR, errmsg='save and comment this data failed')
+        return jsonify(error=RET.DBERR, errmsg='保存用户评论错误')
 
-    return jsonify(error=RET.OK, errmsg='comment commit success', data=comment.to_dict())
+    return jsonify(error=RET.OK, errmsg='ok', data=comment.to_dict())
 
 
 @news_blue.route('/news_collect', methods=['POST'])
@@ -148,22 +148,22 @@ def news_collect():
 
     # verify user
     if not user:
-        return jsonify(error=RET.SESSIONERR, errmsg='user is not login')
+        return jsonify(error=RET.SESSIONERR, errmsg='用户未登陆')
 
     if not news_id:
-        return jsonify(error=RET.PARAMERR, errmsg='params error')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
 
     if action not in ('collect', 'cancel_collect'):
-        return jsonify(error=RET.PARAMERR, errmsg='params error')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不正确')
 
     try:
         news = News.query.get(news_id)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DBERR, errmsg='query data failed')
+        return jsonify(error=RET.DBERR, errmsg='数据查询失败')
 
     if not news:
-        return jsonify(error=RET.NODATA, errmsg='news data is not existing')
+        return jsonify(error=RET.NODATA, errmsg='新闻不存在')
 
     if action == 'collect':
         user.collection_news.append(news)
@@ -176,9 +176,9 @@ def news_collect():
     except Exception as e:
         current_app.logger.error(e)
         db.session.rollback()
-        return jsonify(error=RET.DBERR, errmsg='save failed')
+        return jsonify(error=RET.DBERR, errmsg='保存失败')
 
-    return jsonify(error=RET.OK, errmsg='operating success')
+    return jsonify(error=RET.OK, errmsg='ok')
 
 
 @news_blue.route('/comment_like', methods=['POST'])
@@ -186,7 +186,7 @@ def news_collect():
 def set_comment_like():
     """comment like"""
     if not g.user:
-        return jsonify(error=RET.SESSIONERR, errmsg='user is not login')
+        return jsonify(error=RET.SESSIONERR, errmsg='用户未登录')
 
     # get params
     comment_id = request.json.get('comment_id')
@@ -195,20 +195,20 @@ def set_comment_like():
 
     # verify params
     if not all([comment_id, news_id, action]):
-        return jsonify(error=RET.PARAMERR, errmsg='parmas error')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
 
     if action not in ('add', 'remove'):
-        return jsonify(error=RET.PARAMERR, errmsg='params is failed')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不正确')
 
     # query comment data
     try:
         comment = Comment.query.get(comment_id)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DBERR, errmsg='data query failed')
+        return jsonify(error=RET.DBERR, errmsg='数据查询失败')
 
     if not comment:
-        return jsonify(error=RET.NODATA, errmsg='data query is not exist')
+        return jsonify(error=RET.NODATA, errmsg='评论不存在')
 
     if action == 'add':
         comment_like = CommentLike.query.filter_by(comment_id=comment_id, user_id=g.user.id).first()
@@ -232,9 +232,9 @@ def set_comment_like():
     except Exception as e:
         current_app.logger.error(e)
         db.session.rollback()
-        return jsonify(error=RET.DBERR, errmsg='oprating failed')
+        return jsonify(error=RET.DBERR, errmsg='数据保存失败')
 
-    return jsonify(error=RET.OK, errmsg='oprating success')
+    return jsonify(error=RET.OK, errmsg='ok')
 
 
 @news_blue.route('/followed_user', methods=['POST'])
@@ -242,30 +242,30 @@ def set_comment_like():
 def followed_user():
     """follow and cancel followed"""
     if not g.user:
-        return jsonify(error=RET.SESSIONERR, errmsg='user is not login')
+        return jsonify(error=RET.SESSIONERR, errmsg='用户未登录')
 
     user_id = request.json.get('user_id')
     action = request.json.get('action')
 
     if not all([user_id, action]):
-        return jsonify(error=RET.PARAMERR, errmsg='params is not full')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
 
     if action not in ('follow', 'unfollow'):
-        return jsonify(error=RET.PARAMERR, errmsg='params error')
+        return jsonify(error=RET.PARAMERR, errmsg='参数错误')
 
     # query followed user infomations
     try:
         target_user = User.query.get(user_id)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DBERR, errmsg='query database error')
+        return jsonify(error=RET.DBERR, errmsg='数据保存错误')
 
     if not target_user:
-        return jsonify(error=RET.NODATA, errmsg='query user failed')
+        return jsonify(error=RET.NODATA, errmsg='数据查询错误')
 
     if action == 'follow':
         if target_user.followers.filter(User.id == g.user.id).count() > 0:
-            return jsonify(error=RET.DATAEXIST, errmsg='current user is followed')
+            return jsonify(error=RET.DATAEXIST, errmsg='当前用户以被关注')
 
         target_user.followers.append(g.user)
     else:
@@ -276,7 +276,7 @@ def followed_user():
         db.session.commit()
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DBERR,errmsg='save data failed')
+        return jsonify(error=RET.DBERR,errmsg='保存数据失败')
 
-    return jsonify(error=RET.OK,errmsg='operate success')
+    return jsonify(error=RET.OK,errmsg='ok')
 

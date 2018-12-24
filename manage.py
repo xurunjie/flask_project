@@ -15,5 +15,4 @@ manager.add_command('db', MigrateCommand)
 
 if __name__ == '__main__':
     # the manager running
-    logging.info(app.url_map)
     manager.run()

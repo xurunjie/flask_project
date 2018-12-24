@@ -15,6 +15,7 @@ def index():
 
     try:
         new_list = News.query.order_by(News.clicks.desc()).limit(constants.CLICK_RANK_MAX_NEWS)
+        current_app.logger.info(new_list)
     except Exception as e:
         current_app.logger.error(e)
 
@@ -51,10 +52,10 @@ def get_new_list():
         per_page = int(per_page)
     except Exception as e:
         current_app.logger.info(e)
-        return jsonify(error=RET.PARAMERR, error_msg='params must be int not others')
+        return jsonify(error=RET.PARAMERR, error_msg='参数不全')
 
     # filter and pagenation
-    filters = []
+    filters = [News.status==0]
     if categort_id != 1:
         filters.append(News.category_id == categort_id)
 
@@ -62,7 +63,7 @@ def get_new_list():
         paginate = News.query.filter(*filters).order_by(News.create_time.desc()).paginate(page, per_page, False)
     except Exception as e:
         current_app.logger.info(e)
-        return jsonify(error=RET.DATAERR, errmsg='data query failed')
+        return jsonify(error=RET.DATAERR, errmsg='数据查询失败')
 
     # query success
     items = paginate.items

@@ -42,10 +42,10 @@ def base_info():
 
     # verify params
     if not all([nick_name, gender, signature]):
-        return jsonify(error=RET.PARAMERR, errmsg='parmas is not full')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
 
     if gender not in (['MAN', 'WOMEN']):
-        return jsonify(error=RET.PARAMERR, errmsg='params is error')
+        return jsonify(error=RET.PARAMERR, errmsg='性别选择错误')
 
     # update and save data
     user.nick_name = nick_name
@@ -58,10 +58,10 @@ def base_info():
     except Exception as e:
         current_app.logger.error(e)
         db.session.rollback()
-        return jsonify(error=RET.DBERR, errmsg='save data failed')
+        return jsonify(error=RET.DBERR, errmsg='数据保存失败')
 
     session['nick_name'] = nick_name
-    return jsonify(error=RET.OK, errmsg='is updating')
+    return jsonify(error=RET.OK, errmsg='ok')
 
 
 @profile_blue.route('/pic_info', methods=['POST', 'GET'])
@@ -79,14 +79,14 @@ def pic_info():
         avatar_file = request.files.get('avatar').read()
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.PARAMERR, errmsg='file read failed')
+        return jsonify(error=RET.PARAMERR, errmsg='文件读取失败')
 
     # upload file to qiniu stack
     try:
         url = storage(avatar_file)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.THIRDERR, errmsg='upload image error')
+        return jsonify(error=RET.THIRDERR, errmsg='文件上传失败')
 
     # syschronize image to web client
     user.avatar_url = url
@@ -95,7 +95,7 @@ def pic_info():
     except Exception as e:
         current_app.logger.error(e)
         db.session.rollback()
-        return jsonify(error=RET.DBERR, errmsg='save user data error')
+        return jsonify(error=RET.DBERR, errmsg='保存数据错误')
     data = {
         'avatar_url': constants.QINIU_DOMIN_PREFIX + url
     }
@@ -115,23 +115,23 @@ def pass_info():
     new_password = data.get('new_password')
 
     if not all([old_password, new_password]):
-        return jsonify(error=RET.OK, errmsg='parmas is not full')
+        return jsonify(error=RET.OK, errmsg='参数不全')
 
     user = g.user
     # verify init password
     if not user.check_passowrd(old_password):
-        return jsonify(error=RET.PWDERR, errmsg='old password is not true')
+        return jsonify(error=RET.PWDERR, errmsg='密码输入不正确')
     if old_password == new_password:
-        return jsonify(error=RET.PWDERR, errmsg='old password and new password can not be the same')
+        return jsonify(error=RET.PWDERR, errmsg='旧密码和新密码不能相同')
     user.password = new_password
     try:
         db.session.commit()
     except Exception as e:
         current_app.logger.error(e)
         db.session.rollback()
-        return jsonify(error=RET.OK, errmsg='save password failed')
+        return jsonify(error=RET.OK, errmsg='保存密码失败')
 
-    return jsonify(error=RET.OK, errmsg='save data success')
+    return jsonify(error=RET.OK, errmsg='保存数据失败')
 
 
 @profile_blue.route('/collection', methods=['GET', 'POST'])
@@ -200,21 +200,21 @@ def news_release():
 
     # verify params
     if not all([title, source, digest, content, index_image, category_id]):
-        return jsonify(error=RET.PARAMERR, errmsg='params is not full')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
 
     # get image
     try:
         index_image = index_image.read()
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.PARAMERR, errmsg='image is not true')
+        return jsonify(error=RET.PARAMERR, errmsg='文件读取错误')
 
     # save image to qiniu
     try:
         key = storage(index_image)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.THIRDERR, errmsg='upload image failed')
+        return jsonify(error=RET.THIRDERR, errmsg='文件上传错误')
 
     # init news
     new = News()
@@ -235,10 +235,10 @@ def news_release():
     except Exception as e:
         current_app.logger.error(e)
         db.session.rollback()
-        return jsonify(error=RET.DBERR, errmsg='save data failed')
+        return jsonify(error=RET.DBERR, errmsg='保存数据失败')
 
     # return response
-    return jsonify(error=RET.OK, errmsg='upload success,wait for reviewing')
+    return jsonify(error=RET.OK, errmsg='ok')
 
 
 @profile_blue.route('/news_list')
@@ -363,16 +363,16 @@ def other_news_list():
         page = 1
 
     if not all([page, user_id]):
-        return jsonify(errno=RET.PARAMERR, errmsg="params error")
+        return jsonify(error=RET.PARAMERR, errmsg="参数不全")
 
     try:
         user = User.query.get(user_id)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(errno=RET.DBERR, errmsg="query error")
+        return jsonify(error=RET.DBERR, errmsg="用户不存在")
 
     if not user:
-        return jsonify(errno=RET.NODATA, errmsg="user is not login")
+        return jsonify(error=RET.NODATA, errmsg="用户未登录")
 
     try:
         paginate = News.query.filter(News.user_id == user.id).paginate(page, constants.OTHER_NEWS_PAGE_MAX_COUNT, False)
@@ -381,11 +381,11 @@ def other_news_list():
         total_page = paginate.pages
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(errno=RET.DBERR, errmsg="query databases failed")
+        return jsonify(error=RET.DBERR, errmsg="查询数据失败")
 
     news_dict_li = []
 
     for news_item in news_li:
         news_dict_li.append(news_item.to_review_dict())
     data = {"news_list": news_dict_li, "total_page": total_page, "current_page": current_page}
-    return jsonify(errno=RET.OK, errmsg="OK", data=data)
+    return jsonify(error=RET.OK, errmsg="OK", data=data)

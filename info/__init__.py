@@ -81,4 +81,9 @@ def create_app(config_name):
     # register userprofile
     from info.modules.profile import profile_blue
     app.register_blueprint(profile_blue)
+
+    # register admin blueprint
+    from info.modules.admin import admin_blue
+    app.register_blueprint(admin_blue)
+
     return app

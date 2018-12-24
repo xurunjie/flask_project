@@ -23,7 +23,11 @@ def get_image_code():
         redis_store.set('image_code_id_' + image_code_id, text, constants.IMAGE_CODE_REDIS_EXPIRES)
     except Exception as e:
         current_app.logger.error(e)
-        return make_response(jsonify(error=RET.DATAERR, errmsg='save image code failed'))
+        return make_response(jsonify(error=RET.DATAERR, errmsg='保存验证码失败'))
+
+    resp = make_response(image_data)
+
+    resp.headers['Content-Type'] = 'image/jpg'
     # 4.return image
     return image_data
 
@@ -39,10 +43,10 @@ def sms_code():
     image_code_id = params_dict.get('image_code_id')
     # 4.verify all infomations
     if not all([mobile, image_code, image_code_id]):
-        return jsonify(error=RET.PARAMERR, errmsg='incomplete parameters')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
     # 5.verify mobile number is true or false
     if not re.match(r'^1[3-9][0-9]{9}', mobile):
-        return jsonify(error=RET.DATAERR, errmsg='mobile format is not true')
+        return jsonify(error=RET.DATAERR, errmsg='手机号码不正确')
     # 6.verify image code
     real_image_code = None
     try:
@@ -53,21 +57,21 @@ def sms_code():
             redis_store.delete('image_code_id_' + image_code_id)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DBERR, errmsg='get image code from redis failed')
+        return jsonify(error=RET.DBERR, errmsg='验证码查询错误')
 
     if not real_image_code:
-        return jsonify(error=RET.NODATA, errmsg='image code had been expired')
+        return jsonify(error=RET.NODATA, errmsg='验证码已过期')
 
     if image_code.lower() != real_image_code.lower():
-        return jsonify(error=RET.DATAERR, errmsg='verify image code is not samed to realy image code')
+        return jsonify(error=RET.DATAERR, errmsg='验证码输入错误')
 
     try:
         user = User.query.filter_by(mobile=mobile).first()
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DBERR, errmsg='database query error')
+        return jsonify(error=RET.DBERR, errmsg='数据查询错误')
     if user:
-        return jsonify(error=RET.DATAEXIST, errmsg='the mobile has been registered')
+        return jsonify(error=RET.DATAEXIST, errmsg='用户已存在，不能重复注册')
     # 7.create sms and send it to the mobile num
     result = random.randint(0, 999999)
     current_app.logger.info(result)
@@ -83,10 +87,10 @@ def sms_code():
         redis_store.set('SMS_' + mobile, sms_code, constants.SMS_CODE_REDIS_EXPIRES)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DBERR, errmsg='save sms code failed')
+        return jsonify(error=RET.DBERR, errmsg='报错短信验证码失败')
 
     # 9.reutrn response
-    return jsonify(error=RET.OK, errmsg='send sms ok')
+    return jsonify(error=RET.OK, errmsg='ok')
 
 
 @passport_blue.route('/register', methods=['POST'])
@@ -103,20 +107,20 @@ def register():
 
     # if not all params
     if not all([mobile, sms_code, password]):
-        return jsonify(error=RET.PARAMERR, errmsg='incomplete parameters')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
 
     # get real sms code from redis
     try:
         real_sms_code = redis_store.get('SMS_' + mobile)
     except Exception as e:
         current_app.logger.error(e)
-        return jsonify(error=RET.DATAERR, errmsg='get local sms code failed')
+        return jsonify(error=RET.DATAERR, errmsg='获取短信验证码失败')
     # determine sms whether None
     if not real_sms_code:
-        return jsonify(RET.NODATA, errmsg='sms code had expired')
+        return jsonify(RET.NODATA, errmsg='短信验证码已过期')
     # verify sms code whether true or false
     if sms_code != real_sms_code.decode():
-        return jsonify(RET.DATAERR, errmsg='sms code error')
+        return jsonify(RET.DATAERR, errmsg='短信验证码错误')
 
     # verify true
     try:
@@ -138,7 +142,7 @@ def register():
     except Exception as e:
         db.session.rollback()
         current_app.logger.error(e)
-        return jsonify(RET.DATAERR, errmsg='save data error')
+        return jsonify(RET.DATAERR, errmsg='用户保存错误')
 
     # keep login in web clent
     session['user_id'] = user.id
@@ -162,21 +166,21 @@ def login():
 
     # verify params
     if not all([mobile, password]):
-        return jsonify(error=RET.PARAMERR, errmsg='incomplete parameters')
+        return jsonify(error=RET.PARAMERR, errmsg='参数不全')
 
     # find user from database of user table
     try:
         user = User.query.filter_by(mobile=mobile).first()
     except Exception as e:
         current_app.logger.info(e)
-        return jsonify(error=RET.DATAERR, errmsg='select user information error')
+        return jsonify(error=RET.DATAERR, errmsg='用户查询错误')
     # if not have user
     if not user:
-        return jsonify(error=RET.DATAEXIST, errmsg='user does not exist')
+        return jsonify(error=RET.DATAEXIST, errmsg='用户不存在')
 
     # verify password
     if not user.check_passowrd(password):
-        return jsonify(error=RET.PWDERR, errmsg='login password error')
+        return jsonify(error=RET.PWDERR, errmsg='用户名或密码错误')
 
     # login success save user infomations in session
     session['user_id'] = user.id
@@ -189,7 +193,7 @@ def login():
         db.session.commit()
     except Exception as e:
         current_app.error(e)
-        return jsonify(error=RET.DATAERR, errmsg='user informations update error')
+        return jsonify(error=RET.DATAERR, errmsg='用户数据更新错误')
 
     return jsonify(error=RET.OK, errmsg='ok')
 
